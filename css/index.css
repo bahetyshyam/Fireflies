@@ -1,0 +1,140 @@
+#page {
+	background-image: url("../assets/images/1.jpg");
+	background-size: cover;
+}
+
+#brand-link {
+	text-decoration: none;
+}
+
+.brand-logo {
+	margin-left: 80px;
+	font-family: 'Raleway', sans-serif;
+}
+
+#navbar {
+	background-color: #232121;
+	height: 70px;
+}
+
+.links {
+	margin-right: 20px;
+	font-family: 'Raleway', sans-serif;
+	border-radius: 5px;
+}
+
+.links:hover {
+	background-color: #31CBDA;
+	color: white;
+	text-decoration: none;
+}
+
+#main-title {
+	color: white;
+	margin-top: 15%;
+	font-size: 105px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+}
+
+
+#sub {
+	color: white;
+	margin-top: 1%;
+	font-size: 25px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+}
+
+#join-us {
+	background-color: #31CBDA;
+	margin-top: 4%;
+	margin-left: 43%;
+	height: 70px;
+	width: 200px;
+	font-size: 27px;
+	border-radius: 10px;
+	padding-top: 16px;
+	font-weight: 500;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 15%;
+	text-transform: capitalize;
+}
+
+#box {
+	margin-left: 25%;
+	margin-top: 10%;
+}
+
+#heading {
+	font-family: 'Raleway', sans-serif;
+	font-size: 50px;
+	margin-bottom: 5%;
+}
+
+.in {
+	margin-bottom: 35px;
+}
+
+.intext {
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	color: black;
+}
+
+.textf {
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+}
+
+#Sign {
+	background-color: #3F5666;
+	margin-top: 10px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	height: 60px;
+	padding-top: 10px;
+	width: 160px; 
+	border-radius: 15px;
+	margin-left: 25%;
+	text-transform: capitalize;
+	margin-bottom: 115px;
+	color: white;
+}
+
+#main {
+	background-image: url("../assets/images/2.jpg");
+	background-size: cover;
+}
+
+#genre-page {
+	background-color: black;
+}
+
+#genre-title {
+	font-family: 'Raleway', sans-serif;
+	font-size: 70px;
+	margin-top: 5%;
+	color: white;
+	margin-left: 62%;
+	margin-bottom: 20%;
+}
+
+#genre-cat1 {
+
+	font-family: 'Raleway', sans-serif;
+	font-size: 80px;
+	color: #F45837;
+	padding-right: 60%;
+}
+
+#genre-cat2 {
+	margin-top: 40%;
+	font-family: 'Raleway', sans-serif;
+	font-size: 60px;
+	color: #48D832;
+	margin-bottom: 30%;
+	margin-right: 25%;
+}
+
