@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Genre</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="hover-min.css">
+	<link rel="stylesheet" type="text/css" href="fa-svg-with-js.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="navbar-fixed">
+	    <nav id="navbar" class="black">
+	      <div class="nav-wrapper">
+	        <a href="#" id="brand-link" class="brand-logo">Fireflies</a>
+	        <!-- <ul class="right hide-on-med-and-down">
+	          <li><a class="links hvr-grow" href="#">Sign In</a></li>
+	          <li><a class="links hvr-grow" href="#">Sign Up</a></li>
+	        </ul> -->
+
+	        <div class="sidebar black">
+	        	<div class="sideItems" id="first">
+	        		<a class="sideLinks" href="http://www.google.com"><i class="medium sideIcons material-icons">search</i>Search</a>
+	        	</div>
+	        	<div class="sideItems">
+	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">music_note</i>Genre</a>
+	        	</div>
+	        	<div class="sideItems">
+	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>
+	        	</div>	
+			</div>
+
+			<a class="sideBtn"></a>
+
+	      </div>
+	    </nav>
+	</div>
+	<div id="backgenre" class="container-fluid grey darken-4">
+		<div class="row">
+			<div class="col s12 m12 l12">
+				<h3 id="genredesc">Brighten your mood by listening to your favourite genre</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s4 m4 l4">
+				<img src="AR3.jpg" class="genrepic circle responsive-img">
+				<p><a id="genrecat1" href="#">Alternative Rock</a></p>
+			</div>
+			<div class="col s4 m4 l4">
+				<img src="EDM3.jpg" class="genrepic circle responsive-img">
+				<p><a id="genrecat2" href="#">EDM</a></p>
+			</div>
+			<div class="col s4 m4 l4">
+				<img src="Pop3.jpg" class="genrepic circle responsive-img">
+				<p><a id="genrecat3" href="#">Pop</a></p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col s4 m4 l4">
+				<img src="HipHop3.jpg" class="genrepic circle responsive-img">
+				<p><a id="genrecat4" href="#">Hip-Hop</a></p>
+			</div>
+			<div class="col s4 m4 l4">
+				<img src="Country3.jpg" class="genrepic circle responsive-img">
+				<p><a id="genrecat5" href="#">Country</a></p>
+			</div>
+			<div class="col s4 m4 l4">
+				<img src="Rock3.jpg" class="genrepic circle responsive-img">
+				<p><a id="genrecat6" href="#">Rock</a></p>
+			</div>
+		</div>
+
+		<div class="row">
+			
+			<div class="col s4 m4 l4">
+				<img src="Metal3.jpg" class="circle responsive-img" id="genrepic1">
+				<p><a id="genrecat7" href="#">Metal</a></p>
+			</div>
+			
+		</div>
+	</div>
+
+	<!--Now Playing Bar -->
+	<div id="nowPlayingContainer" class="black">
+		<div id="nowPlayingBar">
+			<div id="nowPlayingLeft">
+				<div class="content">
+					<span class="albumLink">
+						<img src="Mylo Xyloto.jpg" class="albumArt">
+					</span>
+
+					<div class="trackInfo">
+						<span class="trackName">
+							<span>Hurts Like Heaven</span>
+						</span>
+
+						<span class="artistName">
+							<span>Coldplay</span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div id="nowPlayingCenter">
+				<div class="content playerControls">
+					<div class="buttons">
+						<button class="controlButton shuffle">
+							<i class="material-icons">shuffle</i>
+						</button>
+						<button class="controlButton previous">
+							<i class="material-icons">skip_previous</i>
+						</button>
+						<button class="controlButton play">
+							<i class="medium material-icons">play_arrow</i>
+						</button>
+						<button class="controlButton pause">
+							<i class="medium material-icons">pause</i>
+						</button>
+						<button class="controlButton next">
+							<i class="material-icons">skip_next</i>
+						</button>
+						<button class="controlButton repeat">
+							<i class="material-icons">repeat</i>
+						</button>
+						<button class="controlButton repeatOne">
+							<i class="material-icons">repeat_one</i>
+						</button>
+					</div>
+
+					<div id="playbackBar">
+						<span class="progressTime current">0:00</span>
+						<div class="progressBar">
+							<div class="progressBarBg grey darken-3">
+								<div class="progressRem light-blue lighten-2">
+									
+								</div>
+							</div>
+						</div>
+						<span class="progressTime remaining">0:00</span>
+					</div>
+				</div>
+			</div>
+			<div id="nowPlayingRight">
+				<div class="volumeBar">
+					<button class="controlButton volume">
+						<i class="material-icons">volume_up</i>
+					</button>
+					<div class="progressBar">
+						<div class="progressBarBg grey darken-3">
+							<div class="progressRem light-blue lighten-2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Now Playing Bar Ends here -->
+
+</body>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script type="text/javascript" src="materialize.min.js"></script>
+<link rel="stylesheet" type="text/css" href="fontawesome-all.min.js">
+<script type="text/javascript" src="index.js"></script>
+</html>
