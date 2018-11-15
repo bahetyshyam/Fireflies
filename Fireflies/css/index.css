@@ -1,0 +1,393 @@
+#page {
+	background-image: url("E:/xampp/htdocs/Fireflies/images/backgrounds/main.jpg");
+	background-size: cover;
+	height: 100vh;
+}
+
+#brand-link {
+	text-decoration: none;
+}
+
+.brand-logo {
+	margin-left: 80px;
+	font-family: 'Raleway', sans-serif;
+	margin-top: 3px;
+}
+
+#navbar {
+	background-color: #232121;
+	height: 70px;
+}
+
+.links {
+	margin-right: 20px;
+	font-family: 'Raleway', sans-serif;
+	border-radius: 5px;
+}
+
+.links:hover {
+	background-color: #31CBDA;
+	color: white;
+	text-decoration: none;
+}
+
+.sidebar {
+  float: left;
+  width: 300px;
+  height: 100vh;
+  margin-left: -300px;
+  transition: 0.7s all;
+}
+
+.side {
+  margin-left: 0;
+}
+
+.sideItems {
+ padding: 10px 20px;
+ font-size: 20px;
+ display: block;
+ position: relative;
+ cursor: pointer;
+}
+
+#first {
+	margin-top: 80px;
+}
+
+.sideItems:hover {
+	background-color: #31CBDA;
+	transition: 0.6s all;
+}
+
+.sideLinks {
+	color: white;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.sideLinks:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.sidebar .sideLinks .sideIcons {
+	position: absolute;
+	font-size: 30px;
+}
+
+.sideBtn {
+  float: left;
+  padding: 3px 25px;
+  font-size: 40px;
+  color: black;
+  text-decoration: none;
+  font-family: Ionicons;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.sideBtn:before {
+  content: "\f32a";
+}
+
+.btnc:before {
+  content: "\f2c0";
+}
+
+#main-title {
+	color: white;
+	margin-top: 15%;
+	font-size: 105px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+}
+
+
+#sub {
+	color: white;
+	margin-top: 1%;
+	font-size: 25px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+}
+
+#join-us {
+	background-color: #31CBDA;
+	margin-top: 4%;
+	margin-left: 43%;
+	height: 70px;
+	width: 200px;
+	font-size: 27px;
+	border-radius: 10px;
+	padding-top: 16px;
+	font-weight: 500;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 15%;
+	text-transform: capitalize;
+	transition: 0.6s all;
+}
+
+#box {
+	margin-left: 25%;
+	margin-top: 10%;
+}
+
+#heading {
+	font-family: 'Raleway', sans-serif;
+	font-size: 50px;
+	margin-bottom: 5%;
+}
+
+.in {
+	margin-bottom: 35px;
+}
+
+.intext {
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	color: black;
+}
+
+.textf {
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+}
+
+#Sign {
+	background-color: #3F5666;
+	margin-top: 10px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	height: 60px;
+	padding-top: 10px;
+	width: 160px; 
+	border-radius: 15px;
+	margin-left: 25%;
+	text-transform: capitalize;
+	margin-bottom: 115px;
+	color: white;
+}
+
+#main {
+	background-image: url(2.jpg);
+	background-size: cover;
+	
+}
+
+#nowPlayingContainer {
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+	min-width: 620px;
+}
+
+#nowPlayingBar {
+	display: flex;
+	padding: 15px;
+	height: 130px;
+	box-sizing: border-box;
+}
+
+#nowPlayingLeft, #nowPlayingRight {
+	width: 30%;
+	min-width: 180px;
+}
+
+#nowPlayingCenter {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 750px;
+}
+
+#nowPlayingBar .content {
+	width: 100%;
+}
+
+.playerControls .buttons {
+	margin: 0 auto;
+	display: table;
+}
+
+.controlButton {
+	background-color: transparent;
+	border: none;
+	vertical-align: middle;
+	color: silver;
+}
+
+.controlButton:hover {
+	color: white;
+}
+
+.pause , .repeatOne {
+	display: none;
+}
+
+.progressTime {
+	color: silver;
+	font-size: 12px;
+	text-align: center;
+	min-width: 40px;
+	font-family: 'Raleway', sans-serif;
+}
+
+#playbackBar {
+	display: flex;
+}
+
+.progressBar {
+	width: 100%;
+	height: 10px;
+	display: inline-flex;
+	cursor: pointer;
+	margin-top: 7px;
+}
+
+.progressBarBg {
+	width: 100%;
+	height: 4px;
+	border-radius: 3px;
+}
+
+.progressRem {
+
+	height: 4px;
+	border-radius: 3px;
+	width: 60%;
+}
+
+#nowPlayingLeft .albumArt {
+	height: 100%;
+	width: 90px;
+	margin-right: 15px;
+	float: left;
+}
+
+#nowPlaying .trackInfo {
+	display: table;
+}
+
+#nowPlayingLeft .trackInfo .trackName {
+	color: white;
+	margin: 6px 0;
+	display: block;
+	width: 100%;
+	padding-top: 16px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+}
+
+#nowPlayingLeft .trackInfo .artistName {
+	color: silver;
+	font-size: 14px;
+	font-family: 'Raleway', sans-serif;
+}
+
+#nowPlayingRight {
+	margin-top: 45px;
+}
+
+.volume {
+	display: block;
+	float: left;
+}
+
+.volumeBar {
+	right: 35px;
+	position: absolute;
+	width: 180px;
+}
+
+.volumeBar .progressBar {
+	width: 125px;
+}
+
+.volumeBar .progressRem {
+	width: 90%;
+}
+
+#backgenre {
+	margin-bottom: 7%;
+	height: 170vh;
+}
+
+#genredesc {
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	font-size: 50px;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	color: white;
+}
+
+.genrepic {
+	margin-left: 25%;
+	margin-bottom: 5%;
+	margin-top: 5%;
+}
+
+#genrecat1 {
+	text-decoration: none;
+	color: white;
+	margin-left: 33%;
+	font-family: 'Raleway', sans-serif;
+	font-size: 25px;
+}
+
+#genrecat2 {
+	text-decoration: none;
+	color: white;
+	margin-left: 45%;
+	font-family: 'Raleway', sans-serif;
+	font-size: 25px;
+}
+
+#genrecat3 {
+	text-decoration: none;
+	color: white;
+	margin-left: 47%;
+	font-family: 'Raleway', sans-serif;
+	font-size: 25px;
+}
+
+#genrecat4 {
+	text-decoration: none;
+	color: white;
+	margin-left: 41%;
+	font-family: 'Raleway', sans-serif;
+	font-size: 25px;
+}
+
+#genrecat5 {
+	text-decoration: none;
+	color: white;
+	margin-left: 43%;
+	font-family: 'Raleway', sans-serif;
+	font-size: 25px;
+}
+
+#genrecat6 {
+	text-decoration: none;
+	color: white;
+	margin-left: 46%;
+	font-family: 'Raleway', sans-serif;
+	font-size: 25px;
+}
+
+#genrecat7 {
+	text-decoration: none;
+	color: white;
+	margin-left: 48%;
+	font-family: 'Raleway', sans-serif;
+	font-size: 25px;
+}
+
+#genrepic1 {
+	margin-left: 42%;
+	margin-bottom: 2%;
+	margin-top: 3%;
+}
