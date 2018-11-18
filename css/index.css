@@ -80,15 +80,16 @@
   float: left;
   padding: 3px 25px;
   font-size: 40px;
-  color: black;
   text-decoration: none;
   font-family: Ionicons;
   cursor: pointer;
   background-color: transparent;
+  color: white;
 }
 
 .sideBtn:before {
   content: "\f32a";
+  
 }
 
 .btnc:before {
@@ -392,4 +393,129 @@ align-items: center;
 
 #genrepic1 {
 	align-items: center;
+}
+
+.albumContainer {
+	height: 300vh;
+}
+
+#albumHead {
+	font-family: 'Raleway', sans-serif;
+	font-size: 60px;
+	color: white;
+	margin-top: 5%;
+}
+
+.gridViewItem {
+
+	margin-left: 8%;
+	margin-right: 9%;
+	margin-bottom: 3%;
+	display: inline-block;
+	margin-top: 5%;
+	transition: 0.6s all;	
+}
+
+.gridViewItem img {
+	width: 100%;
+}
+
+.gridViewInfo {
+	color: white;
+	margin-top: 5%;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+}
+
+.albumBack {
+	height: 200vh;
+}
+
+.entity {
+	padding: 60px 0 20px 60px;
+	display: inline-block;
+	width: 100%;
+}
+
+.leftSec {
+	float: left;
+	width: 20%;
+}
+
+.rightSec {
+	width: 80%;
+	padding: 80px 0 0 20px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.rightSec h2 {
+	font-size: 40px;
+	color: white;
+}
+
+.rightSec p {
+	font-size: 20px;
+	color: grey;
+}
+
+.trackListContainer {
+	margin-top: 3%;
+}
+
+
+.trackListRow {
+	padding: 6px 15px;
+	height: 80px;
+	list-style: none;
+	color: #D3D3D8;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+}
+
+.trackListRow:hover {
+	background-color: #54514F;
+	color: white;
+	transition: 0.6s;
+}
+
+.trackListRow .number {
+	width: 15%;
+	float: left;
+	padding-left: 10%;
+}
+
+.trackList .trackInfo {
+	width: 65%;
+	float: left; 
+}
+
+.trackList .trackDuration {
+	float: left;
+	align-items: right;
+	width: 10%;
+}
+
+.iconPack {
+	background-color: transparent;
+	border: none;
+	vertical-align: middle;
+	color: silver;
+	float: left;
+	width: 2%;
+	padding-top: 18px;
+	cursor: pointer;
+}
+
+.iconPack .albumPlay {
+	visibility: hidden;
+}
+
+.iconPack:hover .albumPlay {
+	visibility: visible;
+	color: white;
+}
+
+.iconPack .albumPause {
+	visibility: hidden;
+	position: absolute;
 }
