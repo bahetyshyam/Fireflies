@@ -20,8 +20,8 @@
 	      <div class="nav-wrapper">
 	        <a href="#" id="brand-link" class="brand-logo hvr-grow">Fireflies</a>
 	        <ul class="right hide-on-med-and-down">
-	          <li><a class="links hvr-grow" href="#">Sign In</a></li>
-	          <li><a class="links hvr-grow" href="#">Sign Up</a></li>
+	          <li><a class="links hvr-grow" href="signin.html">Sign In</a></li>
+	          <li><a class="links hvr-grow" href="signup.php">Sign Up</a></li>
 	        </ul>
 
 	        <div class="sidebar black">
@@ -51,7 +51,7 @@
 				<div class="col s12 m12 l12">
 					<h2 id="main-title" align="center">Welcome To Fireflies</h2>
 					<p id="sub" align="center">One good thing about music, when it hits you, you feel no pain</p>
-					<a id="join-us" class="waves-effect waves-light btn">Join Us</a>
+					<a id="join-us" class="waves-effect waves-light btn" href="signup.php">Join Us</a>
 				</div>
 			</div>
 		</div>

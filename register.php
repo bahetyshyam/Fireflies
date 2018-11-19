@@ -1,6 +1,6 @@
 <?php 
 
-include("config.php");
+include("includes/config.php");
 
 function sanitizeFormPassword($inputText) {
 	$inputText = strip_tags($inputText);
