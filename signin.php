@@ -2,19 +2,19 @@
 <html>
 <head>
 	<title>Sign In</title>
-	<link rel="stylesheet" type="text/css" href="../css/index.css">
-	<link rel="stylesheet" type="text/css" href="../css/materialize.css">
-	<link rel="stylesheet" type="text/css" href="../css/hover-min.css">
-	<link rel="stylesheet" type="text/css" href="../css/fa-svg-with-js.css">
+	<link rel="stylesheet" type="text/css" href=" css/index.css">
+	<link rel="stylesheet" type="text/css" href=" css/materialize.css">
+	<link rel="stylesheet" type="text/css" href=" css/hover-min.css">
+	<link rel="stylesheet" type="text/css" href=" css/fa-svg-with-js.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
 		<div class="navbar-fixed">
     		<nav id="navbar">
       			<div class="nav-wrapper">
-        			<a href="#" id="brand-link" class="brand-logo">Fireflies</a>
+        			<a href="index.php" id="brand-link" class="brand-logo">Fireflies</a>
         			<ul class="right hide-on-med-and-down">
-          				<li><a class="links hvr-grow" href="#">Sign Up</a></li>
+          				<li><a class="links hvr-grow" href="signup.php">Sign Up</a></li>
         			</ul>
       			</div>
     		</nav>
@@ -26,11 +26,11 @@
 					<h2 id="heading">Sign In To Fireflies</h2>
 					<form action="" method="get" class="in col s4 m4 l4">
 	  					<div class="in">
-	    					<label class="intext" for="Username">Enter your Username</label>
+	    					<label class="intext" for="Username">Username</label>
 	    					<input type="text" name="Username" class="textf" required>
 	  					</div>
 	  					<div class="in">
-	    					<label class="intext" for="email">Enter your password</label>
+	    					<label class="intext" for="email">Password</label>
 	    					<input type="password" name="password" class="textf" required>
 	  					</div>
 	  					<div class="in">

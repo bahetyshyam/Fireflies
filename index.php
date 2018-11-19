@@ -20,7 +20,7 @@
 	      <div class="nav-wrapper">
 	        <a href="#" id="brand-link" class="brand-logo hvr-grow">Fireflies</a>
 	        <ul class="right hide-on-med-and-down">
-	          <li><a class="links hvr-grow" href="signin.html">Sign In</a></li>
+	          <li><a class="links hvr-grow" href="signin.php">Sign In</a></li>
 	          <li><a class="links hvr-grow" href="signup.php">Sign Up</a></li>
 	        </ul>
 

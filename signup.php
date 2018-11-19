@@ -29,9 +29,9 @@
 		<div class="navbar-fixed">
     		<nav id="navbar">
       			<div class="nav-wrapper">
-        			<a href="#" id="brand-link" class="brand-logo">Fireflies</a>
+        			<a href="index.php" id="brand-link" class="brand-logo">Fireflies</a>
         			<ul class="right hide-on-med-and-down">
-          				<li><a class="links hvr-grow" href="#">Sign In</a></li>
+          				<li><a class="links hvr-grow" href="signin.php">Sign In</a></li>
         			</ul>
       			</div>
     		</nav>
