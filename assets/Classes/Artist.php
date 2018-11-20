@@ -14,11 +14,16 @@
 
 				$this->artistName = $artist['Artist_name'];
 				$this->artistPhoto = $artist['Artist_photo'];
+				$this->artistId = $artist['Artist_id'];
 
 			}
 
 			public function getName() {
 				return $this->artistName;
+			}
+
+			public function getId() {
+				return $this->artistId;
 			}
 
 			public function getArtwork() {

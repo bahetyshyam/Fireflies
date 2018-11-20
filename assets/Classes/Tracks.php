@@ -22,11 +22,17 @@
 			$this->duration = $track['Play_time'];
 			$this->path = $track['Song_file'];
 			$this->num = $track['Track_no'];
+			$this->id = $track['Track_id'];
 		}
 
 		public function getTitle() {
 			return $this->title;
 		}
+
+		public function getId() {
+			return $this->id;
+		}
+
 
 		public function getAlbum() {
 			return new Album($this->con, $this->albumId);

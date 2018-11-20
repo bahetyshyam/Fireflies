@@ -48,5 +48,15 @@
 			}
 			return $array;
 		}
+
+		public function getArtistId() {
+			$Aquery = mysqli_query($this->con, "SELECT * FROM Albums B, Artist A WHERE B.Artist_id='$this->id' AND A.Artist_id=B.Artist_id");
+			$array =  array();
+
+			while($row = mysqli_fetch_array($Aquery)) {
+				array_push($array,$row['Artist_id']);
+			}
+			return $array;
+		}
 	}
 ?>
