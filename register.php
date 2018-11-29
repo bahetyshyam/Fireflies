@@ -31,6 +31,24 @@
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
+	<?php
+		if(isset($_POST['registerButton'])) {
+			echo '<script>
+					 $(document).ready(function() {
+							$("#loginForm").hide();
+							$("#registerForm").show();
+					});
+				   </script>';
+		}
+		else {
+			echo '<script>
+					 $(document).ready(function() {
+							$("#loginForm").show();
+							$("#registerForm").hide();
+					});
+				   </script>';
+		}
+	?>
 
 	<!--Navbar begins here -->
 	<div class="navbar-fixed ">
@@ -105,7 +123,7 @@
 				<?php echo $account->getError(Constants::$emailsDoNotMatch); ?>
 				<?php echo $account->getError(Constants::$emailInvalid); ?>
 				<?php echo $account->getError(Constants::$emailTaken); ?>
-				<label for="email">Email</label>
+				<label class="fields" for="email">Email</label>
 				<input id="email" name="email" type="email" placeholder="e.g. bart@gmail.com" value="<?php getInputValue('email') ?>" required>
 			</p>
 
