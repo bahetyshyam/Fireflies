@@ -68,6 +68,13 @@
 			<div class="rightSec">
 				<h2> <?php echo $artist->getName(); ?> </h2>
 			</div>
+			<div id="artistInfo">
+				<h5 id="aboutHead">About the Artist</h5>
+				<hr>
+				<p id="aboutContent">Coldplay are a British rock band, formed in 1996 by lead singer and pianist Chris Martin and lead guitarist Jonny Buckland at University College London (UCL). After they formed under the name Pectoralz, Guy Berryman joined the group as bassist and they changed their name to Starfish. Will Champion joined as drummer and backing vocalist, completing the line-up. Creative director and former manager Phil Harvey is often referred to as the fifth member by the band. The band renamed themselves Coldplay in 1998, before recording and releasing three EPs: Safety in 1998 and Brothers & Sisters and The Blue Room in 1999. The Blue Room was their first release on a major label, after signing to Parlophone.
+				Coldplay have won 107 awards from 252 nominations throughout their career, including nine Brit Awards, six MTV Video Music Awards, seven MTV Europe Music Awards and seven Grammy Awards from 34 nominations. They have sold more than 100 million records worldwide, making them one of the world's best-selling music artists.</p>
+
+			</div>
 				
 		</div>
 	</div>
