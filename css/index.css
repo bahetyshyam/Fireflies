@@ -173,7 +173,7 @@
 #main {
 	background-image: url("../assets/images/backgrounds/registeration.jpg");
 	background-size: cover;
-	height: 100vh;
+	height: 140vh;
 /*	margin-top: -28px;*/
 }
 
@@ -204,6 +204,10 @@
 	font-family: 'Raleway', sans-serif;
 	margin-left: 12%;
 	margin-bottom: 30px;
+}
+
+#loginForm,#registerForm {
+	display: none;
 }
 
 #nowPlayingContainer {
@@ -553,3 +557,26 @@ align-items: center;
 	height: 1000px;
 }
 
+hr {
+	width: 30%;
+	margin-left: -70%;
+	margin-top: 20px;
+	background-color: #4DF018;
+}
+
+#artistInfo {
+	color: white;
+	margin-top: 12%;
+}
+
+#aboutHead {
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+}
+
+#aboutContent {
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	margin-right: 4%;
+	color: silver;
+}
