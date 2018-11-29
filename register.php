@@ -80,13 +80,13 @@
 		<form id="loginForm" action="register.php" method="POST">
 			<h2 class="signHeading">Log In To Fireflies</h2>
 			<p>
-				<?php echo $account->getError(Constants::$loginFailed); ?>
 				<label class="fields" for="loginUsername">Username</label>
 				<input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. peterGriffin" required>
 			</p>
 			<p>
 				<label class="fields" for="loginPassword">Password</label>
 				<input id="loginPassword" name="loginPassword" type="password" placeholder="Your password" required>
+				<?php echo $account->getError(Constants::$loginFailed); ?>
 			</p>
 
 			<button id="Sign" type="submit" name="loginButton" class="waves-effect waves-light btn">LOG IN</button>
@@ -101,30 +101,30 @@
 		<form id="registerForm" action="register.php" method="POST">
 			<h2 class="signHeading">Join Fireflies</h2>
 			<p>
-				<?php echo $account->getError(Constants::$usernameCharacters); ?>
-				<?php echo $account->getError(Constants::$usernameTaken); ?>
 				<label class="fields" for="username">Username</label>
 				<input id="username" name="username" type="text" placeholder="e.g. bartSimpson" value="<?php getInputValue('username') ?>" required>
+				<?php echo $account->getError(Constants::$usernameCharacters); ?>
+				<?php echo $account->getError(Constants::$usernameTaken); ?>
 			</p>
 
 			<p>
-				<?php echo $account->getError(Constants::$firstNameCharacters); ?>
 				<label class="fields" for="firstName">First name</label>
 				<input id="firstName" name="firstName" type="text" placeholder="e.g. Bart" value="<?php getInputValue('firstName') ?>" required>
+				<?php echo $account->getError(Constants::$firstNameCharacters); ?>
 			</p>
 
 			<p>
-				<?php echo $account->getError(Constants::$lastNameCharacters); ?>
 				<label class="fields" for="lastName">Last name</label>
 				<input id="lastName" name="lastName" type="text" placeholder="e.g. Simpson" value="<?php getInputValue('lastName') ?>" required>
+				<?php echo $account->getError(Constants::$lastNameCharacters); ?>
 			</p>
 
 			<p>
+				<label class="fields" for="email">Email</label>
+				<input id="email" name="email" type="email" placeholder="e.g. bart@gmail.com" value="<?php getInputValue('email') ?>" required>
 				<?php echo $account->getError(Constants::$emailsDoNotMatch); ?>
 				<?php echo $account->getError(Constants::$emailInvalid); ?>
 				<?php echo $account->getError(Constants::$emailTaken); ?>
-				<label class="fields" for="email">Email</label>
-				<input id="email" name="email" type="email" placeholder="e.g. bart@gmail.com" value="<?php getInputValue('email') ?>" required>
 			</p>
 
 			<p>
@@ -133,11 +133,11 @@
 			</p>
 
 			<p>
+				<label class="fields" for="password">Password</label>
+				<input id="password" name="password" type="password" placeholder="Your password" required>
 				<?php echo $account->getError(Constants::$passwordsDoNoMatch); ?>
 				<?php echo $account->getError(Constants::$passwordNotAlphanumeric); ?>
 				<?php echo $account->getError(Constants::$passwordCharacters); ?>
-				<label class="fields" for="password">Password</label>
-				<input id="password" name="password" type="password" placeholder="Your password" required>
 			</p>
 
 			<p>
