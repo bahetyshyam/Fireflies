@@ -164,7 +164,7 @@
 			});
 		}
 
-		function playSong() {
+		function playSong() {8
 
 			$(".controlButton.play").hide();
 			$(".controlButton.pause").show();
