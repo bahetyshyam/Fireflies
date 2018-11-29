@@ -34,6 +34,7 @@ if(isset($_POST['registerButton'])) {
 	if($wasSuccessful == true) {
 		header("Location: index.php");
 	}
+
 }
 
 

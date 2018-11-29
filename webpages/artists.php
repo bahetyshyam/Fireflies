@@ -25,6 +25,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css" rel="stylesheet">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="../js/materialize.js"></script>
+<script type="text/javascript" src="../js/fontawesome-all.min.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
 </head>
 <body>
 	<!--Navbar begins here -->
@@ -53,23 +60,16 @@
 	</div>
 	<!--Navbar ends here -->
 
-	<div class="artistBack">
+	<div class="artistBack grey darken-4">
 		<div class="entity">
 			<div class="leftSec">
-				<img class="artistPic" src=" <?php echo $artist->getArtworkPath(); ?> ">
+				<img class="albumPic circle" src=" <?php echo $artist->getArtworkPath(); ?> ">
 			</div>
-
 			<div class="rightSec">
-				<h2>By <?php echo $artist->getName(); ?> </h2>
+				<h2> <?php echo $artist->getName(); ?> </h2>
 			</div>
+				
 		</div>
 	</div>
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-<script type="text/javascript" src="../js/materialize.js"></script>
-<script type="text/javascript" src="../js/fontawesome-all.min.js"></script>
-<script type="text/javascript" src="../js/index.js"></script>
 </html>

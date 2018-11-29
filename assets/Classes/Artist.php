@@ -26,7 +26,7 @@
 				return $this->artistId;
 			}
 
-			public function getArtwork() {
+			public function getArtworkPath() {
 				return $this->artistPhoto;
 			}
 	}

@@ -40,7 +40,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="../js/materialize.js"></script>
 	<script type="text/javascript" src="../js/fontawesome-all.min.js"></script>
-	<script type="text/javascript" src="../js/index.js"></script>
+	
 	
 </head>
 <body>
@@ -164,7 +164,7 @@
 			});
 		}
 
-		function playSong() {8
+		function playSong() {
 
 			$(".controlButton.play").hide();
 			$(".controlButton.pause").show();
@@ -189,7 +189,7 @@
 	        		<a class="sideLinks" href="http://www.google.com"><i class="medium sideIcons material-icons">search</i>Search</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">music_note</i>Genre</a>
+	        		<span class="sideLinks" onclick="openpage('albums.php')"><i class="medium sideIcons material-icons">music_note</i>Albums</span>
 	        	</div>
 	        	<div class="sideItems">
 	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>
@@ -209,14 +209,13 @@
 	<div class="albumBack grey darken-4">
 		<div class="entity">
 			<div class="leftSec">
-				<img class="albumPic" src=" <?php echo $album->getArtworkPath(); ?> ">
+				<img class="albumPic circle" src=" <?php echo $album->getArtworkPath(); ?> ">
 			</div>
 
 			<div class="rightSec">
 				<h2> <?php echo $album->getTitle(); ?> </h2>
 				<?php 
-					$artistIdArray = $album->getArtistId();
-					foreach($artistIdArray as $artistId) {
+					$artistId = $album->getArtistId();
 						$artist = new Artist($con, $artistId);
 						$artistName = $artist->getName();
 						$artistNum = $artist ->getId();
@@ -225,8 +224,6 @@
 							<p>By " . $artistName .  "</p>
 							</a>
 						";
-
-					}
 				?>
 			</div>
 		</div>
@@ -350,5 +347,5 @@
 	</div>
 	<!-- Now Playing Bar Ends here -->
 </body>
-
+<script type="text/javascript" src="../js/index.js"></script>
 </html>

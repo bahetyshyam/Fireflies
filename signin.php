@@ -1,3 +1,20 @@
+<?php
+	include("config.php");
+	include("includes/classes/Account.php");
+	include("includes/classes/Constants.php");
+
+	$account = new Account($con);
+
+	include("includes/handlers/register-handler.php");
+	include("includes/handlers/login-handler.php");
+
+	function getInputValue($name) {
+		if(isset($_POST[$name])) {
+			echo $_POST[$name];
+		}
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +51,7 @@
 	    					<input type="password" name="password" class="textf" required>
 	  					</div>
 	  					<div class="in">
-	    					<a id="Sign" class="waves-effect waves-light btn">Sign In</a>
+	    					<button type="submit" id="Sign" name="loginButton" class="waves-effect waves-light btn">Sign In</button>
 	  					</div>
 					</form>
 				</div>

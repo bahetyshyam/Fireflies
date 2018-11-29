@@ -3,12 +3,34 @@ $('.sideBtn').on("click",function() {
 	$('.sidebar').toggleClass('side');
 });
 
+$(document).ready(function() {
+
+	$("#hideLogin").click(function() {
+		$("#loginForm").hide();
+		$("#registerForm").show();
+	});
+
+	$("#hideRegister").click(function() {
+		$("#loginForm").show();
+		$("#registerForm").hide();
+	});
+});
+
 var currentPlaylist = [];
 var tempPlaylist = [];
 var audioElement;
 var currentIndex = 0;
  var mousedown = false;
 var repeat = false;
+
+function openpage(url) {
+	if(url.indexOf("?") == -1) {
+		url = url+"?";
+	}
+
+	var encodeUrl = encodeURI(url);
+	$(".albumBack").load(encodeUrl);
+}
 
 function formatTime(seconds) {
 	var time = Math.round(seconds);
