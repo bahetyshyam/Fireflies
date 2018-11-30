@@ -473,6 +473,7 @@ align-items: center;
 .leftSec {
 	float: left;
 	width: 20%;
+	margin-right: 3%;
 }
 
 .rightSec {

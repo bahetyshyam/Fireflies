@@ -54,7 +54,7 @@
 	<div class="navbar-fixed ">
 	    <nav id="navbar" class="black">
 	      <div class="nav-wrapper">
-	        <a href="#" id="brand-link" class="brand-logo hvr-grow">Fireflies</a>
+	        <a href="index.php" id="brand-link" class="brand-logo hvr-grow">Fireflies</a>
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">

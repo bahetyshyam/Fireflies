@@ -15,7 +15,7 @@
 
 	$artist = $album->getArtist();
 
-	$songQuery = mysqli_query($con, "SELECT Track_id FROM Tracks ORDER BY RAND() LIMIT 10");
+	$songQuery = mysqli_query($con, "SELECT Track_id FROM Tracks ORDER BY RAND() LIMIT 100");
 
 	$resultArray = array();
 

@@ -20,8 +20,8 @@
 	      <div class="nav-wrapper">
 	        <a href="#" id="brand-link" class="brand-logo hvr-grow">Fireflies</a>
 	        <ul class="right hide-on-med-and-down">
-	          <li><a class="links hvr-grow" href="signin.php">Sign In</a></li>
-	          <li><a class="links hvr-grow" href="signup.php">Sign Up</a></li>
+	          <li><a class="links hvr-grow" href="register.php">Sign In</a></li>
+	          <li><a class="links hvr-grow" href="register.php">Sign Up</a></li>
 	        </ul>
 
 	        <div class="sidebar black">
@@ -29,7 +29,7 @@
 	        		<a class="sideLinks" href="http://www.google.com"><i class="medium sideIcons material-icons">search</i>Search</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">music_note</i>Genre</a>
+	        		<a class="sideLinks" href="webpages/albums.php"><i class="medium sideIcons material-icons">music_note</i>Albums</a>
 	        	</div>
 	        	<div class="sideItems">
 	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>
@@ -51,7 +51,7 @@
 				<div class="col s12 m12 l12">
 					<h2 id="main-title" align="center">Welcome To Fireflies</h2>
 					<p id="sub" align="center">One good thing about music, when it hits you, you feel no pain</p>
-					<a id="join-us" class="waves-effect waves-light btn" href="signup.php">Join Us</a>
+					<a id="join-us" class="waves-effect waves-light btn" href="register.php">Join Us</a>
 				</div>
 			</div>
 		</div>
