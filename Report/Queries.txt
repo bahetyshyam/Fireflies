@@ -55,15 +55,10 @@ A.Album_id=B.Album_id and
 C.Genre_name="Metal";
 
 7. Search and display the Album Name, Artist name and the Track name according to the input.
-
 select A.Album_name, B.Artist_name, C.Song
-
 from Albums A, Artist B, Tracks C
-
 where A.Album_id=C.Album_id and
-
 A.Artist_id=B.Artist_id and
-
 (Album_name like '%Living%' or Artist_name like '%Daft%' or Song like '%Paul%');
 
 
@@ -71,21 +66,13 @@ A.Artist_id=B.Artist_id and
 8.Find the songs whose genre is Pop and sung  by Ed Sheeran.
 
 select * from Tracks
-
 where Track_id in(
-
 select A.Track_id
-
 from Tracks A, Genre B, Albums C, Artist D
-
 where C.Album_id=A.Album_id and
-
 C.Artist_id=D.Artist_id and
-
 C.Genre_id=B.Genre_id and
-
 B.Genre_name='Pop' and
-
 D.Artist_name='Ed Sheeran');
 
 
