@@ -1,0 +1,346 @@
+create table Artist( Artist_id int primary key,
+Artist_name varchar(30),
+Artist_desc varchar(300),
+Artist_photo varchar(500));
+
+create table Genre(Genre_id int primary key,
+Genre_name varchar(30));
+
+create table Playlist(Playlist_id int primary key,
+Playlist_name varchar(30));
+
+create table Albums(Album_id int primary key,
+Album_name varchar(30),
+Release_year date,
+Producer varchar(40),
+Album_art varchar(500),
+Artist_id int not null,
+Genre_id int not null);
+
+alter table Albums add foreign key test1(Artist_id) references Artist(Artist_id) on delete cascade;
+
+create table Tracks(Track_id int primary key,
+Song varchar(30),
+Play_time varchar(10),
+Lyrics varchar(500),
+Song_file varchar(500),
+Album_id int not null,
+Playlist_id int not null);
+
+alter table Tracks add foreign key test4(Playlist_id) references Playlist(Playlist_id) on delete cascade;
+
+
+
+
+
+alter table Sales_charts add foreign key test5(Album_id) references Albums(Album_id) on delete cascade;
+
+create table Users(User_id int,
+Fullname varchar(30),
+Username varchar(20),
+Pass varchar(20),
+Confirm_pass varchar(20),
+Email_id varchar(50),
+primary key(User_id,Username));
+
+
+
+insert into Artist values(2,'Daft Punk','F:\Fireflies\Artists\Daft Punk.jpg');
+insert into Artist values(3,'Oasis','F:\Fireflies\Artists\Oasis.jpg');
+insert into Artist values(4,'Avicii','F:\Fireflies\Artists\Avicii.jpg');
+insert into Artist values(5,'Ed Sheeran','F:\Fireflies\Artists\Ed Sheeran.jpg');
+insert into Artist values(6,'Coldplay','F:\Fireflies\Artists\Coldplay.jpg');
+insert into Artist values(7,'Eminem','F:\Fireflies\Artists\Eminem.jpg');
+insert into Artist values(8,'Logic','F:\Fireflies\Artists\Logic.jpg');
+insert into Artist values(9,'Chris Stapleton','F:\Fireflies\Artists\Chris Stapleton.jpg');
+insert into Artist values(10,'Blake Shelton','F:\Fireflies\Artists\Blake Shelton.jpg');
+insert into Artist values(11,'Imagine Dragons','F:\Fireflies\Artists\Imagine Dragons.jpg');
+insert into Artist values(12,'Pink Floyd','F:\Fireflies\Artists\Pink Floyd.jpg');
+insert into Artist values(13,'Metallica','F:\Fireflies\Artists\Metallica.jpeg');
+
+insert into Genre values(2,'EDM');
+insert into Genre values(3,'Pop');
+insert into Genre values(4,'Hip Hop');
+insert into Genre values(5,'Country');
+insert into Genre values(6,'Rock');
+insert into Genre values(7,'Metal');
+
+insert into Playlist values(1,'Playlist 1');
+insert into Playlist values(2,'Playlist 2');
+insert into Playlist values(3,'Playlist 3');
+insert into Playlist values(4,'Playlist 4');
+
+
+insert into Albums values(1,'Living Things','2012-06-20','Rick Rubin','F:\\Fireflies\\Album Arts\\Living Things.jpg',1,1);
+insert into Albums values(3,'Random Access Memories','2013-05-17','Thomas Bangalter','F:\\Fireflies\\Album Arts\\Random Access Memories.png',2,2);
+insert into Albums values(4,'Stories','2015-10-02','Tim Bergling','F:\\Fireflies\Album Arts\Stories.jpg',4,2);
+insert into Albums values(5,'Divide','2017-03-03','Benny Blanco','F:\Fireflies\Album Arts\Divide.jpg',5,3);
+insert into Albums values(6,'Mylo Xyloto','2011-10-19','Markus Dravs','F:\Fireflies\Album Arts\Mylo Xyloto.jpg',6,3);
+insert into Albums values(7,'The Incredible True Story','2015-11-13','Logic','F:\Fireflies\Album Arts\The Incredible True Story.jpg',8,4);
+insert into Albums values(8,'The Marshall Mathers LP','2000-05-23','Dr.Dre','F:\Fireflies\Album Arts\MMLP.jpg',7,4);
+insert into Albums values(9,'Traveller','2015-05-05','Dave Cobb','F:\Fireflies\Album Arts\Traveller.jpg',9,5);
+insert into Albums values(10,'Red River Blue','2011-07-12','Scott Hendricks','F:\Fireflies\Album Arts\Red River Blue.jpg',10,5);
+insert into Albums values(11,'Smoke+Mirrors','2015-02-17','Alex Da Kid','F:\Fireflies\Album Arts\Smoke+Mirrors.jpg',11,6);
+insert into Albums values(12,'The Dark Side of the Moon','1973-03-01','Pink Floyd','F:\Fireflies\Album Arts\The Dark Side of the Moon.jpeg',12,6);
+insert into Albums values(13,'Metallica','1991-08-12','James HetField','F:\Fireflies\Album Arts\Metallica.jpg',13,7);
+insert into Albums values(14,'Hybrid Theory','2000-10-24','Don Gilmore','F:\Fireflies\Album Arts\Hybrid Theory.jpg',1,7);
+
+
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\Living Things.jpg' where Album_id=1;
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\Morning Glory.jpg' where Album_id=2;
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\Random Access Memories.png' where Album_id=3;
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\Stories.jpg' where Album_id=4;
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\Divide.jpg' where Album_id=5;
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\Mylo Xyloto.jpg' where Album_id=6;
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\The Incredible True Story.jpg' where Album_id=7;
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\MMLP.jpg' where Album_id=8;
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\Traveller.jpg' where Album_id=9;
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\Red River Blue.jpg' where Album_id=10;
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\Smoke+Mirrors.jpg' where Album_id=11;
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\The Dark Side of the Moon.jpeg' where Album_id=12;
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\Metallica.jpg' where Album_id=13;
+update Albums set Album_art='F:\\Fireflies\\Album Arts\\Hybrid Theory.jpg' where Album_id=14;
+
+
+insert into Sales_charts values(1,'2x Platinum',1000000,40);
+insert into Sales_charts values(2,'14x Platinum',4700000,13);
+insert into Sales_charts values(3,'2x Platinum',1000000,19);
+insert into Sales_charts values(4,'2x Platinum',8000000,17);
+insert into Sales_charts values(5,'10x Platinum',2278248,1);
+insert into Sales_charts values(6,'5x Platinum',1660000,1);
+insert into Sales_charts values(7,'Gold',500000,3);
+insert into Sales_charts values(8,'Diamond',11000000,1);
+insert into Sales_charts values(9,'3x Platinum',2335400,1);
+insert into Sales_charts values(10,'2x Platinum',10000000,1);
+insert into Sales_charts values(11,'Platinum',1000000,1);
+insert into Sales_charts values(12,'16x Platinum',15000000,2);
+insert into Sales_charts values(13,'16x Platinum',16648000,1);
+insert into Sales_charts values(14,'11x Platinum',11000211,2);
+
+update Tracks set Song_file='../assets/Songs/The Dark Side Of The Moon/01 - Speak To Me.mp3' where Track_id = 145;
+update Tracks set Song_file='../assets/Songs/The Dark Side Of The Moon/02 - Breathe.mp3' where Track_id = 146;
+update Tracks set Song_file='../assets/Songs/The Dark Side Of The Moon/03 - On The Run.mp3' where Track_id = 147;
+update Tracks set Song_file='../assets/Songs/The Dark Side Of The Moon/04 - Time.mp3' where Track_id = 148;
+update Tracks set Song_file='../assets/Songs/The Dark Side Of The Moon/05 - The Great Gig In The Sky.mp3' where Track_id = 149;
+update Tracks set Song_file='../assets/Songs/The Dark Side Of The Moon/06 - Money.mp3' where Track_id = 150;
+update Tracks set Song_file='../assets/Songs/The Dark Side Of The Moon/07 - Us And Them.mp3' where Track_id = 151;
+update Tracks set Song_file='../assets/Songs/The Dark Side Of The Moon/08 - Any Colour You Like.mp3' where Track_id = 152;
+update Tracks set Song_file='../assets/Songs/The Dark Side Of The Moon/09 - Brain Damage.mp3' where Track_id = 153;
+update Tracks set Song_file='../assets/Songs/The Dark Side Of The Moon/10 - Eclipse.mp3' where Track_id = 154;
+
+
+
+insert into Tracks values(1,1,"Lost in the Echo",'3:25','F:\\Fireflies\\Lyrics\\Living Things\\1. Lost In The Echo.txt','../assets/Songs/Living Things/01 - Lost In The Echo.mp3',1,1);
+insert into Tracks values(2,2,"In My Remains",'3:20','F:\\Fireflies\\Lyrics\\Living Things\\2. In My Remains.txt','../assets/Songs/Living Things/02 - In My Remains.mp3',1,1);
+insert into Tracks values(3,3,"Burn It Down",'3:50','F:\\Fireflies\\Lyrics\\Living Things\\3 Burn It Down.txt','../assets/Songs/Living Things/03 - Burn It Down.mp3',1,4);
+insert into Tracks values(4,4,"Lies Greed Misery",'2:27','F:\\Fireflies\\Lyrics\\Living Things\\4. Lies Greed Misery.txt','../assets/Songs/Living Things/04 - Lies Greed Misery.mp3',1,2);
+insert into Tracks values(5,5,"Ill Be Gone",'3:31','F:\\Fireflies\\Lyrics\\Living Things\\5. Ill Be Gone.txt','../assets/Songs/Living Things/05 - Ill Be Gone.mp3',1,3);
+insert into Tracks values(6,6,"Castle of Glass",'3:25','F:\\Fireflies\\Lyrics\\Living Things\\6. Castle of Glass.txt','../assets/Songs/Living Things/06 - Castle of Glass.mp3',1,4);
+insert into Tracks values(7,7,"Victimized",'1:46','F:\\Fireflies\\Lyrics\\Living Things\\7. Victimized.txt','../assets/Songs/Living Things/07 - Victimized.mp3',1,2);
+insert into Tracks values(8,8,"Roads Untraveled",'3:49','F:\\Fireflies\\Lyrics\\Living Things\\8. Roads Untraveled.txt','../assets/Songs/Living Things/08 - Roads Untraveled.mp3',1,1);
+insert into Tracks values(9,9,"Skin to Bone",'2:48','F:\\Fireflies\\Lyrics\\Living Things\\9. Skin to Bone.txt','../assets/Songs/Living Things/09 - Skin to Bone.mp3',1,2);
+insert into Tracks values(10,10,"Until It Breaks",'3:43','F:\\Fireflies\\Lyrics\\Living Things\\10. Until It Breaks.txt','../assets/Songs/Living Things/10 - Until It Breaks.mp3',1,3);
+insert into Tracks values(11,11,"Tinfoil",'1:11','F:\\Fireflies\\Lyrics\\Living Things\\11. Tinfoil.txt','../assets/Songs/Living Things/11 - Tinfoil.mp3',1,4);
+insert into Tracks values(12,12,"Powerless",'3:44','F:\\Fireflies\\Lyrics\\Living Things\\12. Powerless.txt','../assets/Songs/Living Things/12 - Powerless.mp3',1,2);
+
+
+insert into Tracks values(13,1,"Hello",'3:21','F:\\Fireflies\\Lyrics\\Morning Glory\\1. Hello.txt','../assets/Songs/Morning Glory/01 - Hello.mp3',2,4);
+insert into Tracks values(14,2,"Roll with It",'3:59','F:\\Fireflies\\Lyrics\\Morning Glory\\2. Roll with It.txt','../assets/Songs/Morning Glory/02 - Roll with It.mp3',2,1);
+insert into Tracks values(15,3,"Wonderwall",'4:18','F:\\Fireflies\\Lyrics\\Morning Glory\\3. Wonderwall.txt','../assets/Songs/Morning Glory/03 - Wonderwall.mp3',2,1);
+insert into Tracks values(16,4,"Don't Look Back in Anger",'4:48','F:\\Fireflies\\Lyrics\\Morning Glory\\4. Don't Look Back in Anger.txt','../assets/Songs/Morning Glory/04 - Don't Look Back in Anger.mp3',2,4);
+insert into Tracks values(17,5,"Hey Now",'5:41','F:\\Fireflies\\Lyrics\\Morning Glory\\5. Hey Now.txt','../assets/Songs/Morning Glory/05 - Hey Now.mp3',2,2);
+insert into Tracks values(18,6,"Untitled",'0:44','F:\\Fireflies\\Lyrics\\Morning Glory\\6. Untitled.txt','../assets/Songs/Morning Glory/06 - Untitled.mp3',2,1);
+insert into Tracks values(19,7,"Some Might Say",'5:28','F:\\Fireflies\\Lyrics\\Morning Glory\\7. Some Might Say.txt','../assets/Songs/Morning Glory/07 - Some Might Say.mp3',2,3);
+insert into Tracks values(20,8,"Cast No Shadow",'4:51','F:\\Fireflies\\Lyrics\\Morning Glory\\8. Cast No Shadow.txt','../assets/Songs/Morning Glory/08 - Cast No Shadow.mp3',2,4);
+insert into Tracks values(21,9,"She's Electric",'3:40','F:\\Fireflies\\Lyrics\\Morning Glory\\9. She's Electric.txt','../assets/Songs/Morning Glory/09 - She's Electric.mp3',2,1);
+insert into Tracks values(22,10,"Morning Glory",'5:03','F:\\Fireflies\\Lyrics\\Morning Glory\\10. Morning Glory.txt','../assets/Songs/Morning Glory/10 - Morning Glory.mp3',2,1);
+insert into Tracks values(23,11,"Untitled",'0:40','F:\\Fireflies\\Lyrics\\Morning Glory\\11. Untitled.txt','../assets/Songs/Morning Glory/11 - Untitled.mp3',2,2);
+insert into Tracks values(24,12,"Champagne Supernova",'7:27','F:\\Fireflies\\Lyrics\\Morning Glory\\12. Champagne Supernova.txt','../assets/Songs/Morning Glory/12 - Champagne Supernova.mp3',2,3);
+
+
+insert into Tracks values(25,1,"Give Life Back to Music",'4:34','F:\\Fireflies\\Lyrics\\Random Access Memories\\1. Give Life Back to Music.txt','../assets/Songs/Random Access Memories/01 - Give Life Back to Music.mp3',3,2);
+insert into Tracks values(26,2,"The Game of Love",'5:21','F:\\Fireflies\\Lyrics\\Random Access Memories\\2. The Game of Love.txt','../assets/Songs/Random Access Memories/02 - The Game of Love.mp3',3,2);
+insert into Tracks values(27,3,"Giorgio by Moroder",'9:04','F:\\Fireflies\\Lyrics\\Random Access Memories\\3. Giorgio by Moroder.txt','../assets/Songs/Random Access Memories/03 - Giorgio by Moroder.mp3',3,3);
+insert into Tracks values(28,4,"Within",'3:48','F:\\Fireflies\\Lyrics\\Random Access Memories\\4. Within.txt','../assets/Songs/Random Access Memories/04 - Within.mp3',3,1);
+insert into Tracks values(29,5,"Instant Crush",'5:37','F:\\Fireflies\\Lyrics\\Random Access Memories\\5. Instant Crush.txt','../assets/Songs/Random Access Memories/05 - Instant Crush.mp3',3,1);
+insert into Tracks values(30,6,"Lose Yourself to Dance",'5:53','F:\\Fireflies\\Lyrics\\Random Access Memories\\6. Lose Yourself to Dance.txt','../assets/Songs/Random Access Memories/06 - Lose Yourself to Dance.mp3',3,2);
+insert into Tracks values(31,7,"Touch",'8:18','F:\\Fireflies\\Lyrics\\Random Access Memories\\7. Touch.txt','../assets/Songs/Random Access Memories/07 - Touch.mp3',3,4);
+insert into Tracks values(32,8,"Get Lucky",'6:08','F:\\Fireflies\\Lyrics\\Random Access Memories\\8. Get Lucky.txt','../assets/Songs/Random Access Memories/08 - Get Lucky.mp3',3,4);
+insert into Tracks values(33,9,"Beyond",'4:50','F:\\Fireflies\\Lyrics\\Random Access Memories\\9. Beyond.txt','../assets/Songs/Random Access Memories/09 - Beyond.mp3',3,2);
+insert into Tracks values(34,10,"Motherboard",'5:41','F:\\Fireflies\\Lyrics\\Random Access Memories\\10. Motherboard.txt','../assets/Songs/Random Access Memories/10 - Motherboard.mp3',3,3);
+insert into Tracks values(35,11,"Fragments of Time",'4:39','F:\\Fireflies\\Lyrics\\Random Access Memories\\11. Fragments of Time.txt','../assets/Songs/Random Access Memories/11 - Fragments of Time.mp3',3,3);
+insert into Tracks values(36,12,"Doin It Right",'4:11','F:\\Fireflies\\Lyrics\\Random Access Memories\\12. Doin It Right.txt','../assets/Songs/Random Access Memories/12 - Doin It Right.mp3',1,4);
+insert into Tracks values(37,13,"Contact",'6:21','F:\\Fireflies\\Lyrics\\Random Access Memories\\13. Contact.txt','../assets/Songs/Random Access Memories/13 - Contact.mp3',3,1);
+
+
+insert into Tracks values(38,1,"Waiting for Love",'3:50','F:\\Fireflies\\Lyrics\\Stories\\1. Waiting for Love.txt','../assets/Songs/Stories/01 - Waiting for Love.mp3',4,1);
+insert into Tracks values(39,2,"Talk to Myself",'3:55','F:\\Fireflies\\Lyrics\\Stories\\2. Talk to Myself.txt','../assets/Songs/Stories/02 - Talk to Myself.mp3',4,1);
+insert into Tracks values(40,3,"Touch Me",'3:06','F:\\Fireflies\\Lyrics\\Stories\\3. Touch Me.txt','../assets/Songs/Stories/03 - Touch Me.mp3',4,3);
+insert into Tracks values(41,4,"Ten More Days",'4:05','F:\\Fireflies\\Lyrics\\Stories\\4. Ten More Days.txt','../assets/Songs/Stories/04 - Ten More Days.mp3',4,2);
+insert into Tracks values(42,5,"For a Better Day",'3:26','F:\\Fireflies\\Lyrics\\Stories\\5. For a Better Day.txt','../assets/Songs/Stories/05 - For a Better Day.mp3',4,3);
+insert into Tracks values(43,6,"Broken Arrows",'3:52','F:\\Fireflies\\Lyrics\\Stories\\6. Broken Arrows.txt','../assets/Songs/Stories/06 - Broken Arrows.mp3',4,3);
+insert into Tracks values(44,7,"True Believer",'4:48','F:\\Fireflies\\Lyrics\\Stories\\7. True Believer.txt','../assets/Songs/Stories/07 - True Believer.mp3',4,4);
+insert into Tracks values(45,8,"City Lights",'6:28','F:\\Fireflies\\Lyrics\\Stories\\8. City Lights.txt','../assets/Songs/Stories/08 - City Lights.mp3',4,2);
+insert into Tracks values(46,9,"Pure Grinding",'2:51','F:\\Fireflies\\Lyrics\\Stories\\9. Pure Grinding.txt','../assets/Songs/Stories/09 - Pure Grinding.mp3',4,2);
+insert into Tracks values(47,10,"Sunset Jesus",'4:24','F:\\Fireflies\\Lyrics\\Stories\\10. Sunset Jesus.txt','../assets/Songs/Stories/10 - Sunset Jesus.mp3',4,1);
+insert into Tracks values(48,11,"Cant Catch Me",'3:59','F:\\Fireflies\\Lyrics\\Stories\\11. Cant Catch Me.txt','../assets/Songs/Stories/11 - Cant Catch Me.mp3',4,4);
+insert into Tracks values(49,12,"Somewhere in Stockholm",'3:22','F:\\Fireflies\\Lyrics\\Stories\\12. Somewhere in Stockholm.txt','../assets/Songs/Stories/12 - Somewhere in Stockholm.mp3',4,2);
+insert into Tracks values(50,13,"Trouble",'2:52','F:\\Fireflies\\Lyrics\\Stories\\13. Trouble.txt','../assets/Songs/Stories/13 - Trouble.mp3',4,3);
+insert into Tracks values(51,14,"Gonna Love Ya",'3:35','F:\\Fireflies\\Lyrics\\Stories\\14. Gonna Love Ya.txt','../assets/Songs/Stories/14 - Gonna Love Ya.mp3',4,4);
+
+
+insert into Tracks values(52,1,"Eraser",'3:47','F:\\Fireflies\\Lyrics\\Divide\\1. Eraser.txt','../assets/Songs/Divide/01 - Eraser.mp3'65,3);
+insert into Tracks values(53,2,"Castle on the Hill",'4:21','F:\\Fireflies\\Lyrics\\Divide\\2. Castle on the Hill.txt','../assets/Songs/Divide/02 - Castle on the Hill.mp3',5,3);
+insert into Tracks values(54,3,"Dive",'3:58','F:\\Fireflies\\Lyrics\\Divide\\3. Dive.txt','../assets/Songs/Divide/03 - Dive.mp3',5,1);
+insert into Tracks values(55,4,"Shape of You",'3:53','F:\\Fireflies\\Lyrics\\Divide\\4. Shape of You.txt','../assets/Songs/Divide/04 - Shape of You.mp3',5,1);
+insert into Tracks values(56,5,"Perfect",'4:23','F:\\Fireflies\\Lyrics\\Divide\\5. Perfect.txt','../assets/Songs/Divide/05 - Perfect.mp3',5,1);
+insert into Tracks values(57,6,"Galway Girl",'2:50','F:\\Fireflies\\Lyrics\\Divide\\6. Galway Girl.txt','../assets/Songs/Divide/06 - Galway Girl.mp3',5,2);
+insert into Tracks values(58,7,"Happier",'3:27','F:\\Fireflies\\Lyrics\\Divide\\7. Happier.txt','../assets/Songs/Divide/07 - Happier.mp3',5,4);
+insert into Tracks values(59,8,"New Man",'3:09','F:\\Fireflies\\Lyrics\\Divide\\8. New Man.txt','../assets/Songs/Divide/08 - New Man.mp3',5,3);
+insert into Tracks values(60,9,"Hearts Dont Break Around Here",'4:08','F:\\Fireflies\\Lyrics\\Divide\\9. Hearts Dont Break Around Here.txt','../assets/Songs/Divide/9 - Hearts Dont Break Around Here.mp3',5,2);
+insert into Tracks values(61,10,"What Do I Know",'3:57','F:\\Fireflies\\Lyrics\\Divide\\10. What Do I Know.txt','../assets/Songs/Divide/10 - What Do I Know.mp3',5,1);
+insert into Tracks values(62,11,"How Would You Feel",'4:40','F:\\Fireflies\\Lyrics\\Divide\\11. How Would You Feel.txt','../assets/Songs/Divide/11 - How Would You Feel.mp3',5,4);
+insert into Tracks values(63,12,"Supermarket Flowers",'3:41','F:\\Fireflies\\Lyrics\\Divide\\12. Supermarket Flowers.txt','../assets/Songs/Divide/12 - Supermarket Flowers.mp3',5,2);
+
+
+insert into Tracks values(64,1,"Mylo Xyloto",'0:43','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\1. Mylo Xyloto.txt','../assets/Songs/Mylo Xyloto/01 - Mylo Xyloto.mp3',6,3);
+insert into Tracks values(65,2,"Hurts Like Heaven",'4:02','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\2. Hurts Like Heaven.txt','../assets/Songs/Mylo Xyloto/02 - Hurts Like Heaven.mp3',6,2);
+insert into Tracks values(66,3,"Paradise",'4:37','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\3. Paradise.txt','../assets/Songs/Mylo Xyloto/03 - Paradise.mp3',6,4);
+insert into Tracks values(67,4,"Charlie Brown",'4:45','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\4. Charlie Brown.txt','../assets/Songs/Mylo Xyloto/04 - Charlie Brown.mp3',6,1);
+insert into Tracks values(68,5,"Us Against the World",'3:59','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\5. Us Against the World.txt','../assets/Songs/Mylo Xyloto/05 - Us Against the World.mp3',6,1);
+insert into Tracks values(69,6,"MMIX.",'0:49','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\6. MMIX.txt','../assets/Songs/Mylo Xyloto/06 - MMIX.mp3',6,2);
+insert into Tracks values(70,7,"Every Teardrop Is a Waterfall",'4:00','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\7. Every Teardrop Is a Waterfall.txt','../assets/Songs/Mylo Xyloto/07 - Every Teardrop Is a Waterfall.mp3',6,4);
+insert into Tracks values(71,8,"Major Minus",'3:30','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\8. Major Minus.txt','../assets/Songs/Mylo Xyloto/08 - Major Minus.mp3',6,2);
+insert into Tracks values(72,9,"UFO",'2:17','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\9. UFO.txt','../assets/Songs/Mylo Xyloto/09 - UFO.mp3',6,2);
+insert into Tracks values(73,10,"Princess of China",'3:59','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\10. Princess of China.txt','../assets/Songs/Mylo Xyloto/10 - Princess of China.mp3',6,3);
+insert into Tracks values(74,11,"Up in Flames",'3:13','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\11. Up in Flames.txt','../assets/Songs/Mylo Xyloto/11 - Up in Flames.mp3',6,1);
+insert into Tracks values(75,12,"A Hopeful Transmission",'0:33','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\12. A Hopeful Transmission.txt','../assets/Songs/Mylo Xyloto/12 - A Hopeful Transmission.mp3',6,4);
+insert into Tracks values(76,13,"Dont Let It Break Your Heart",'3:54','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\13. Don't Let It Break Your Heart.txt','../assets/Songs/Mylo Xyloto/13 - Dont Let It Break Your Heart.mp3',6,4);
+insert into Tracks values(77,14,"Up with the Birds",'3:45','F:\\Fireflies\\Lyrics\\Mylo Xyloto\\14. Up with the Birds.txt','../assets/Songs/Mylo Xyloto/14 - Up with the Birds.mp3',6,2);
+
+
+insert into Tracks values(78,1,"Contact",'2:43','F:\\Fireflies\\Lyrics\\The Incredible True Story\\1. Contact.txt','../assets/Songs/The Incredible True Story/01 - Contact.mp3',7,2);
+insert into Tracks values(79,2,"Fade Away",'4:47','F:\\Fireflies\\Lyrics\\The Incredible True Story\\2. Fade Away.txt','../assets/Songs/The Incredible True Story/02 - Fade Away.mp3',7,2);
+insert into Tracks values(80,3,"Upgrade",'2:53','F:\\Fireflies\\Lyrics\\The Incredible True Story\\3. Upgrade.txt','../assets/Songs/The Incredible True Story/03 - Upgrade.mp3',7,4);
+insert into Tracks values(81,4,"White People",'1:39','F:\\Fireflies\\Lyrics\\The Incredible True Story\\4. White People.txt','../assets/Songs/The Incredible True Story/04 - White People.mp3',7,3);
+insert into Tracks values(82,5,"Like Woah",'3:52','F:\\Fireflies\\Lyrics\\The Incredible True Story\\5. Like Woah.txt','../assets/Songs/The Incredible True Story/05 - Like Woah.mp3',7,1);
+insert into Tracks values(83,6,"Young Jesus",'3:35','F:\\Fireflies\\Lyrics\\The Incredible True Story\\6. Young Jesus.txt','../assets/Songs/The Incredible True Story/06 - Young Jesus.mp3',7,2);
+insert into Tracks values(84,7,"Innermission",'4:00','F:\\Fireflies\\Lyrics\\The Incredible True Story\\7. Innermission.txt','../assets/Songs/The Incredible True Story/07 - Innermission.mp3',7,4);
+insert into Tracks values(85,8,"I Am the Greatest",'3:22','F:\\Fireflies\\Lyrics\\The Incredible True Story\\8. I Am the Greatest.txt','../assets/Songs/The Incredible True Story/08 - I Am the Greatest.mp3',7,1);
+insert into Tracks values(86,9,"The Cube",'0:27','F:\\Fireflies\\Lyrics\\The Incredible True Story\\9. The Cube.txt','../assets/Songs/The Incredible True Story/09 - The Cube.mp3',7,2);
+insert into Tracks values(87,10,"Lord Willin",'3:28','F:\\Fireflies\\Lyrics\\The Incredible True Story\\10. Lord Willin.txt','../assets/Songs/The Incredible True Story/10 - Lord Willin.mp3',7,2);
+insert into Tracks values(88,11,"City of Stars",'6:16','F:\\Fireflies\\Lyrics\\The Incredible True Story\\11. City of Stars.txt','../assets/Songs/The Incredible True Story/11 - City of Stars.mp3',7,3);
+insert into Tracks values(89,12,"Stainless",'3:19','F:\\Fireflies\\Lyrics\\The Incredible True Story\\12. Stainless.txt','../assets/Songs/The Incredible True Story/12 - Stainless.mp3',7,4);
+insert into Tracks values(90,13,"Babel",'1:11','F:\\Fireflies\\Lyrics\\The Incredible True Story\\13. Babel.txt','../assets/Songs/The Incredible True Story/13 - Babel.mp3',7,2);
+insert into Tracks values(91,14,"Paradise",'4:42','F:\\Fireflies\\Lyrics\\The Incredible True Story\\14. Paradise.txt','../assets/Songs/The Incredible True Story/14 - Paradise.mp3',7,2);
+insert into Tracks values(92,15,"Never Been",'4:07','F:\\Fireflies\\Lyrics\\The Incredible True Story\\15. Never Been.txt','../assets/Songs/The Incredible True Story/15 - Never Been.mp3',7,3);
+insert into Tracks values(93,16,"Run It",'3:20','F:\\Fireflies\\Lyrics\\The Incredible True Story\\16. Run It.txt','../assets/Songs/The Incredible True Story/16 - Run It.mp3',7,4);
+insert into Tracks values(94,17,"The Incredible True Story",'6:56','F:\\Fireflies\\Lyrics\\The Incredible True Story\\17. The Incredible True Story.txt','../assets/Songs/The Incredible True Story/17 - The Incredible True Story.mp3',7,4);
+
+
+insert into Tracks values(95,1,"Public Service Announcement 2000",'0:25','F:\\Fireflies\\Lyrics\\MMLP\\1. Public Service Announcement 2000.txt','../assets/Songs/MMLP/01 - Public Service Announcement 2000.mp3',8,1);
+insert into Tracks values(96,2,"Stan",'6:44','F:\\Fireflies\\Lyrics\\MMLP\\2. Stan.txt','../assets/Songs/MMLP/02 - Stan.mp3',8,2);
+insert into Tracks values(97,3,"Paul",'0:10','F:\\Fireflies\\Lyrics\\MMLP\\3. Paul.txt','../assets/Songs/MMLP/03 - Paul.mp3',8,4);
+insert into Tracks values(98,4,"Who Knew",'3:47','F:\\Fireflies\\Lyrics\\MMLP\\4. Who Knew.txt','../assets/Songs/MMLP/04 - Who Knew.mp3',8,2);
+insert into Tracks values(99,5,"Steve Berman",'0:53','F:\\Fireflies\\Lyrics\\MMLP\\5. Steve Berman.txt','../assets/Songs/MMLP/05 - Steve Berman.mp3',8,2);
+insert into Tracks values(100,6,"The Way I Am",'4:50','F:\\Fireflies\\Lyrics\\MMLP\\6. The Way I Am.txt','../assets/Songs/MMLP/06 - The Way I Am.mp3',8,4);
+insert into Tracks values(101,7,"The Real Slim Shady",'4:44','F:\\Fireflies\\Lyrics\\MMLP\\7. The Real Slim Shady.txt','../assets/Songs/MMLP/07 - The Real Slim Shady.mp3',8,3);
+insert into Tracks values(102,8,"Remember Me",'3:38','F:\\Fireflies\\Lyrics\\MMLP\\8. Remember Me.txt','../assets/Songs/MMLP/08 - Remember Me.mp3',8,3);
+insert into Tracks values(103,9,"Im Back",'5:10','F:\\Fireflies\\Lyrics\\MMLP\\9. I'm Back.txt','../assets/Songs/MMLP/09 - Im Back.mp3',8,3);
+insert into Tracks values(104,10,"Marshall Mathers",'5:20','F:\\Fireflies\\Lyrics\\MMLP\\10. Marshall Mathers.txt','../assets/Songs/MMLP/10 - Marshall Mathers.mp3',8,2);
+insert into Tracks values(105,11,"Ken Kaniff",'1:01','F:\\Fireflies\\Lyrics\\MMLP\\11. Ken Kaniff.txt','../assets/Songs/MMLP/11 - Ken Kaniff.mp3',8,1);
+insert into Tracks values(106,12,"Amityville",'4:14','F:\\Fireflies\\Lyrics\\MMLP\\12. Amityville.txt','../assets/Songs/MMLP/12 - Amityville.mp3',8,4);
+insert into Tracks values(107,13,"Kim",'6:17','F:\\Fireflies\\Lyrics\\MMLP\\13. Kim.txt','../assets/Songs/MMLP/13 - Kim.mp3',8,3);
+
+
+insert into Tracks values(108,1,"Traveller",'3:42','F:\\Fireflies\\Lyrics\\Traveller\\1. Traveller.txt','../assets/Songs/Traveller/01 - Traveller.mp3',9,2);
+insert into Tracks values(109,2,"Fire Away",'4:04','F:\\Fireflies\\Lyrics\\Traveller\\2. Fire Away.txt','../assets/Songs/Traveller/02 - Fire Away.mp3',9,1);
+insert into Tracks values(110,3,"Tennessee Whiskey",4:52','F:\\Fireflies\\Lyrics\\Traveller\\3. Tennessee Whiskey.txt','../assets/Songs/Traveller/03 - Tennessee Whiskey.mp3',9,1);
+insert into Tracks values(111,4,"Parachute",'4:13','F:\\Fireflies\\Lyrics\\Traveller\\4. Lost In The Echo.txt','../assets/Songs/Traveller/04 - Lost In The Echo.mp3',9,4);
+insert into Tracks values(112,5,"Whiskey and You",'3:56','F:\\Fireflies\\Lyrics\\Traveller\\5. Whiskey and You.txt','../assets/Songs/Traveller/05 - Whiskey and You.mp3',9,2);
+insert into Tracks values(113,6,"Nobody to Blame",'4:04','F:\\Fireflies\\Lyrics\\Traveller\\6. Nobody to Blame.txt','../assets/Songs/Traveller/06 - Nobody to Blame.mp3',9,3);
+insert into Tracks values(114,7,"More of You",'4:37','F:\\Fireflies\\Lyrics\\Traveller\\7. More of You.txt','../assets/Songs/Traveller/07 - More of You.mp3',9,3);
+insert into Tracks values(115,8,"When the Stars Come Out",'4:16','F:\\Fireflies\\Lyrics\\Traveller\\8. When the Stars Come Out.txt','../assets/Songs/Traveller/08 - When the Stars Come Out.mp3',9,4);
+insert into Tracks values(116,9,"Daddy Doesnt Pray Anymore",'4:09','F:\\Fireflies\\Lyrics\\Traveller\\9. Daddy Doesn't Pray Anymore.txt','../assets/Songs/Traveller/09 - Daddy Doesn't Pray Anymore.mp3',9,2);
+insert into Tracks values(117,10,"Was It 26",'4:49','F:\\Fireflies\\Lyrics\\Traveller\\10. Was It 26.txt','../assets/Songs/Traveller/10 - Was It 26.mp3',9,3);
+insert into Tracks values(118,11,"The Devil Named Music",'6:07','F:\\Fireflies\\Lyrics\\Traveller\\11. The Devil Named Music.txt','../assets/Songs/Traveller/11 - The Devil Named Music.mp3',9,2);
+insert into Tracks values(119,12,"Outlaw State of Mind",'5:37','F:\\Fireflies\\Lyrics\\Traveller\\12. Outlaw State of Mind.txt','../assets/Songs/Traveller/12 - Outlaw State of Mind.mp3',9,1);
+insert into Tracks values(120,13,"Sometimes I Cry",'4:02','F:\\Fireflies\\Lyrics\\Traveller\\13. Sometimes I Cry.txt','../assets/Songs/Traveller/13 - Sometimes I Cry.mp3',9,4);
+
+
+insert into Tracks values(121,1,"Honey Bee",'3:30','F:\\Fireflies\\Lyrics\\Red River Blue\\1. Honey Bee.txt','../assets/Songs/Red River Blue/01 - Honey Bee.mp3',10,1);
+insert into Tracks values(122,2,"Ready to Roll",'3:36','F:\\Fireflies\\Lyrics\\Red River Blue\\2. Ready to Roll.txt','../assets/Songs/Red River Blue/02 - Ready to Roll.mp3',10,2);
+insert into Tracks values(123,3,"God Gave Me You",'3:50','F:\\Fireflies\\Lyrics\\Red River Blue\\3. God Gave Me You.txt','../assets/Songs/Red River Blue/03 - God Gave Me You.mp3',10,4);
+insert into Tracks values(124,4,"Get Some",'3:32','F:\\Fireflies\\Lyrics\\Red River Blue\\4. Get Some.txt','../assets/Songs/Red River Blue/04 - Get Some.mp3',10,4);
+insert into Tracks values(125,5,"Drink on It",'3:31','F:\\Fireflies\\Lyrics\\Red River Blue\\5. Drink on It.txt','../assets/Songs/Red River Blue/05 - Drink on It.mp3',10,4);
+insert into Tracks values(126,6,"Good Ol Boys",'3:08','F:\\Fireflies\\Lyrics\\Red River Blue\\6. Good Ol' Boys.txt','../assets/Songs/Red River Blue/06 - Good Ol' Boys.mp3',10,3);
+insert into Tracks values(127,7,"Im Sorry",'3:29','F:\\Fireflies\\Lyrics\\Red River Blue\\7. I'm Sorry.txt','../assets/Songs/Red River Blue/07 - Im Sorry.mp3',10,3);
+insert into Tracks values(128,8,"Sunny in Seattle",'3:27','F:\\Fireflies\\Lyrics\\Red River Blue\\8. Sunny in Seattle.txt','../assets/Songs/Red River Blue/08 - Sunny in Seattle.mp3',10,2);
+insert into Tracks values(129,9,"Over",'3:13','F:\\Fireflies\\Lyrics\\Red River Blue\\\9. Over.txt','../assets/Songs/Red River Blue/09 - Over.mp3',10,2);
+insert into Tracks values(130,10,"Hey",'3:31','F:\\Fireflies\\Lyrics\\Red River Blue\\10. Hey.txt','../assets/Songs/Red River Blue/10 - Hey.mp3',10,3);
+insert into Tracks values(131,11,"Red River Blue",'3:21','F:\\Fireflies\\Lyrics\\Red River Blue\\11. Red River Blue.txt','../assets/Songs/Red River Blue/11 - Red River Blue.mp3',10,4);
+
+
+
+insert into Tracks values(132,1,"Shots",'3:52','F:\\Fireflies\\Lyrics\\Smoke+Mirrors\\1. Shots.txt','../assets/Songs/Smoke+Mirrors/01 - Shots.mp3',11,3);
+insert into Tracks values(133,2,"Gold",'3:36','F:\\Fireflies\\Lyrics\\Smoke+Mirrors\\2. Gold.txt','../assets/Songs/Smoke+Mirrors/02 - Gold.mp3',11,2);
+insert into Tracks values(134,3,"Smoke and Mirrors",'4:20','F:\\Fireflies\\Lyrics\\Smoke+Mirrors\\3. Smoke and Mirrors.txt','../assets/Songs/Smoke+Mirrors/03 - Smoke and Mirrors.mp3',11,1);
+insert into Tracks values(135,4,"Im So Sorry",'3:50','F:\\Fireflies\\Lyrics\\Smoke+Mirrors\\4. I'm So Sorry.txt','../assets/Songs/Smoke+Mirrors/04 - Im So Sorry.mp3',11,1);
+insert into Tracks values(136,5,"I Bet My Life",'3:14','F:\\Fireflies\\Lyrics\\Smoke+Mirrors\\5. I Bet My Life.txt','../assets/Songs/Smoke+Mirrors/05 - I Bet My Life.mp3',11,4);
+insert into Tracks values(137,6,"Polaroid",'3:51','F:\\Fireflies\\Lyrics\\Smoke+Mirrors\\6. Polaroid.txt','../assets/Songs/Smoke+Mirrors/06 - Polaroid.mp3',11,2);
+insert into Tracks values(138,7,"Friction",'3:21','F:\\Fireflies\\Lyrics\\Smoke+Mirrors\\7. Friction.txt','../assets/Songs/Smoke+Mirrors/07 - Friction.mp3',11,3);
+insert into Tracks values(139,8,"It Comes Back to You",'3:37','F:\\Fireflies\\Lyrics\\Smoke+Mirrors\\8. It Comes Back to You.txt','../assets/Songs/Smoke+Mirrors/08 - It Comes Back to You.mp3',11,1);
+insert into Tracks values(140,9,"Dream",'4:18','F:\\Fireflies\\Lyrics\\Smoke+Mirrors\\9. Dream.txt','../assets/Songs/Smoke+Mirrors/09 - Dream.mp3',11,4);
+insert into Tracks values(141,10,"Trouble",'3:12','F:\\Fireflies\\Lyrics\\Smoke+Mirrors\\10. Trouble.txt','../assets/Songs/Smoke+Mirrors/10 - Trouble.mp3',11,2);
+insert into Tracks values(142,11,"Summer",'3:38','F:\\Fireflies\\Lyrics\\Smoke+Mirrors\\11. Summer.txt','../assets/Songs/Smoke+Mirrors/11 - Summer.mp3',11,3);
+insert into Tracks values(143,12,"Hopeless Opus",'4:01','F:\\Fireflies\\Lyrics\\Smoke+Mirrors\\13. Hopeless Opus.txt','../assets/Songs/Smoke+Mirrors/12 - Hopeless Opus.mp3',11,4);
+insert into Tracks values(144,13,"The Fall",'6:05','F:\\Fireflies\\Lyrics\\Smoke+Mirrors\\13. The Fall.txt','../assets/Songs/Smoke+Mirrors/13 - The Fall.mp3',11,2);
+
+
+insert into Tracks values(145,1,"Speak to Me",'1:30','F:\\Fireflies\\Lyrics\\The Dark Side Of The Moon\\1. Speak to Me.txt','F:\\Fireflies\\Songs\\The Dark Side Of The Moon\\01 - Speak to Me.mp3',12,2);
+insert into Tracks values(146,2,"Breathe",'2:43','F:\\Fireflies\\Lyrics\\The Dark Side Of The Moon\\2. Breathe.txt','F:\\Fireflies\\Songs\\The Dark Side Of The Moon\\02 - Breathe.mp3',12,3);
+insert into Tracks values(147,3,"On the Run",'3:30','F:\\Fireflies\\Lyrics\\The Dark Side Of The Moon\\3. On the Run.txt','F:\\Fireflies\\Songs\\The Dark Side Of The Moon\\03 - On the Run.mp3',12,4);
+insert into Tracks values(148,4,"Time",'6:53','F:\\Fireflies\\Lyrics\\The Dark Side Of The Moon\\4. Time.txt','F:\\Fireflies\\Songs\\The Dark Side Of The Moon\\04 - Time.mp3',12,1);
+insert into Tracks values(149,5,"The Great Gig in the Sky",'4:15','F:\\Fireflies\\Lyrics\\The Dark Side Of The Moon\\5. The Great Gig in the Sky.txt','F:\\Fireflies\\Songs\\The Dark Side Of The Moon\\05 - The Great Gig in the Sky.mp3',12,2);
+insert into Tracks values(150,6,"Money",'6:30','F:\\Fireflies\\Lyrics\\The Dark Side Of The Moon\\6. Money.txt','F:\\Fireflies\\Songs\\The Dark Side Of The Moon\\06 - Money.mp3',12,4);
+insert into Tracks values(151,7,"Us and Them",'7:51','F:\\Fireflies\\Lyrics\\The Dark Side Of The Moon\\7. Us and Them.txt','F:\\Fireflies\\Songs\\The Dark Side Of The Moon\\07 - Us and Them.mp3',12,2);
+insert into Tracks values(152,8,"Any Colour You Like",'3:24','F:\\Fireflies\\Lyrics\\The Dark Side Of The Moon\\8. Any Colour You Like.txt','F:\\Fireflies\\Songs\\The Dark Side Of The Moon\\08 - Any Colour You Like.mp3',12,1);
+insert into Tracks values(153,9,"Brain Damage",'3:50','F:\\Fireflies\\Lyrics\\The Dark Side Of The Moon\\9. Lost In The Echo.txt','F:\\Fireflies\\Songs\\The Dark Side Of The Moon\\09 - Lost In The Echo.mp3',12,3);
+insert into Tracks values(154,10,"Eclipse",'2:03','F:\\Fireflies\\Lyrics\\The Dark Side Of The Moon\\10. Eclipse.txt','F:\\Fireflies\\Songs\\The Dark Side Of The Moon\\10 - Eclipse.mp3',12,1);
+
+
+insert into Tracks values(155,1,"Enter Sandman",'5:34','F:\\Fireflies\\Lyrics\\Metallica\\1. Enter Sandman.txt','../assets/Songs/Metallica/01 - Enter Sandman.mp3',13,4);
+insert into Tracks values(156,2,"Sad but True",'5:24','F:\\Fireflies\\Lyrics\\Metallica\\2. Sad but True.txt','../assets/Songs/Metallica/02 - Sad but True.mp3',13,1);
+insert into Tracks values(157,3,"Holier Than Thou",'3:48','F:\\Fireflies\\Lyrics\\Metallica\\3. Holier Than Thou.txt','../assets/Songs/Metallica/03 - Holier Than Thou.mp3',13,4);
+insert into Tracks values(158,4,"The Unforgiven",'6:26','F:\\Fireflies\\Lyrics\\Metallica\\4. The Unforgiven.txt','../assets/Songs/Metallica/04 - The Unforgiven.mp3',13,2);
+insert into Tracks values(159,5,"Wherever I May Roam",'6:44','F:\\Fireflies\\Lyrics\\Metallica\\5. Wherever I May Roam.txt','../assets/Songs/Metallica/05 - Wherever I May Roam.mp3',13,3);
+insert into Tracks values(160,6,"Don't Tread on Me",'4:01','F:\\Fireflies\\Lyrics\\Metallica\\6. Don't Tread on Me.txt','../assets/Songs/Metallica/06 - Don't Tread on Me.mp3',13,4);
+insert into Tracks values(161,7,"Through the Never",'4:03','F:\\Fireflies\\Lyrics\\Metallica\\7. Through the Never.txt','../assets/Songs/Metallica/07 - Through the Never.mp3',13,2);
+insert into Tracks values(162,8,"Nothing Else Matters",'6:30','F:\\Fireflies\\Lyrics\\Metallica\\8. Nothing Else Matters.txt','../assets/Songs/Metallica/08 - Nothing Else Matters.mp3',13,2);
+insert into Tracks values(163,9,"Of Wolf and Man",'4:17','F:\\Fireflies\\Lyrics\\Metallica\\9. Of Wolf and Man.txt','../assets/Songs/Metallica/09 - Of Wolf and Man.mp3',13,1);
+insert into Tracks values(164,10,"The God That Failed",'5:09','F:\\Fireflies\\Lyrics\\Metallica\\10. The God That Failed.txt','../assets/Songs/Metallica/10 - The God That Failed.mp3',13,1);
+insert into Tracks values(165,11,"My Friend of Misery",'6:48','F:\\Fireflies\\Lyrics\\Metallica\\11. My Friend of Misery.txt','../assets/Songs/Metallica/11 - My Friend of Misery.mp3',13,4);
+insert into Tracks values(166,12,"The Struggle Within",'3:56','F:\\Fireflies\\Lyrics\\Metallica\\12. The Struggle Within.txt','../assets/Songs/Metallica/12 - The Struggle Within.mp3',13,2);
+
+
+
+insert into Tracks values(167,1,"Papercut",'3:04','F:\\Fireflies\\Lyrics\\Hybrid Theory\\1. Papercut.txt','../assets/Songs/Hybrid Theory/01 - Papercut.mp3',14,3);
+insert into Tracks values(168,2,"One Step Closer",'2:35','F:\\Fireflies\\Lyrics\\Hybrid Theory\\2. One Step Closer.txt','../assets/Songs/Hybrid Theory/02 - One Step Closer.mp3',14,2);
+insert into Tracks values(169,3,"With You",'3:23','F:\\Fireflies\\Lyrics\\Hybrid Theory\\3. With You.txt','../assets/Songs/Hybrid Theory/03 - With You.mp3',14,2);
+insert into Tracks values(170,4,"Points of Authority",'3:20','F:\\Fireflies\\Lyrics\\Hybrid Theory\\4. Points of Authority.txt','../assets/Songs/Hybrid Theory/04 - Points of Authority.mp3',14,3);
+insert into Tracks values(171,5,"Crawling",'3:29','F:\\Fireflies\\Lyrics\\Hybrid Theory\\5. Crawling.txt','../assets/Songs/Hybrid Theory/05 - Crawling.mp3',14,3);
+insert into Tracks values(172,6,"Runaway",'3:03','F:\\Fireflies\\Lyrics\\Hybrid Theory\\6. Runaway.txt','../assets/Songs/Hybrid Theory/06 - Runaway.mp3',14,2);
+insert into Tracks values(173,7,"By Myself",'3:09','F:\\Fireflies\\Lyrics\\Hybrid Theory\\7. By Myself.txt','../assets/Songs/Hybrid Theory/07 - By Myself.mp3',14,2);
+insert into Tracks values(174,8,"In the End",'3:36','F:\\Fireflies\\Lyrics\\Hybrid Theory\\8. In the End.txt','../assets/Songs/Hybrid Theory/08 - In the End.mp3',14,1);
+insert into Tracks values(175,9,"A Place for My Head",'3:04','F:\\Fireflies\\Lyrics\\Hybrid Theory\\9. A Place for My Head.txt','../assets/Songs/Hybrid Theory/09 - A Place for My Head.mp3',14,2);
+insert into Tracks values(176,10,"Forgotten",'3:14','F:\\Fireflies\\Lyrics\\Hybrid Theory\\10. Forgotten.txt','../assets/Songs/Hybrid Theory/10 - Forgotten.mp3',14,1);
+insert into Tracks values(177,11,"Cure for the Itch",'2:37','F:\\Fireflies\\Lyrics\\Hybrid Theory\\11. Cure for the Itch.txt','../assets/Songs/Hybrid Theory/11 - Cure for the Itch.mp3',14,3);
+insert into Tracks values(178,12,"Pushing Me Away",'3:11','F:\\Fireflies\\Lyrics\\Hybrid Theory\\12. Pushing Me Away.txt','../assets/Songs/Hybrid Theory/12 - Pushing Me Away.mp3',14,4);
+
+
+
+
+
+
+
+

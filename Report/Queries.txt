@@ -66,7 +66,9 @@ A.Artist_id=B.Artist_id and
 
 (Album_name like '%Living%' or Artist_name like '%Daft%' or Song like '%Paul%');
 
-8.Find the songs whose genre is Metal and sung  by Linkin Park
+
+
+8.Find the songs whose genre is Pop and sung  by Ed Sheeran.
 
 select * from Tracks
 
@@ -82,14 +84,21 @@ C.Artist_id=D.Artist_id and
 
 C.Genre_id=B.Genre_id and
 
-B.Genre_name='Metal' and
+B.Genre_name='Pop' and
 
-D.Artist_name='Linkin Park'); 
-
-
+D.Artist_name='Ed Sheeran');
 
 
+Stored Procedure
 
+CREATE DEFINER=`root`@`%` PROCEDURE `display_View`()
+BEGIN
+    create view albums_per3 as
+    select A.Album_name, B.Certification,B.Albums_sold
+    from Albums A,Sales_charts B
+    where A.Album_id=B.Album_id and
+    A.Album_name="Mylo Xyloto";
+END
 
 
 
