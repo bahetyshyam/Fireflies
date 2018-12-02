@@ -26,10 +26,10 @@
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">
-	        		<a class="sideLinks" href="http://www.google.com"><i class="medium sideIcons material-icons">search</i>Search</a>
+	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">search</i>Search</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="webpages/albums.php"><i class="medium sideIcons material-icons">music_note</i>Albums</a>
+	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">music_note</i>Albums</a>
 	        	</div>
 	        	<div class="sideItems">
 	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>

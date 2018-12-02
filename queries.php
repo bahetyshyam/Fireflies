@@ -25,21 +25,24 @@
 	<div class="navbar-fixed ">
 	    <nav id="navbar" class="black">
 	      <div class="nav-wrapper">
-	        <a href="#" id="brand-link" class="brand-logo hvr-grow">Fireflies</a>
-	        <ul class="right hide-on-med-and-down">
-	          <li><a class="links hvr-grow" href="signin.php">Sign In</a></li>
-	          <li><a class="links hvr-grow" href="signup.php">Sign Up</a></li>
-	        </ul>
+	        <a href="webpages/albums.php" id="brand-link" class="brand-logo hvr-grow">Fireflies</a>
+	        <!-- <ul class="right hide-on-med-and-down">
+	          <li><a class="links hvr-grow" href="register.php">Sign In</a></li>
+	          <li><a class="links hvr-grow" href="register.php">Sign Up</a></li>
+	        </ul> -->
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">
-	        		<a class="sideLinks" href="http://www.google.com"><i class="medium sideIcons material-icons">search</i>Search</a>
+	        		<a class="sideLinks" href="search.php"><i class="medium sideIcons material-icons">search</i>Search</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">music_note</i>Genre</a>
+	        		<a class="sideLinks" href="genre.php"><i class="medium sideIcons material-icons">music_note</i>Genre</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>
+	        		<a class="sideLinks" href="webpages/albums.php"><i class="medium sideIcons material-icons">queue_music</i>Albums</a>
+	        	</div>
+	        	<div class="sideItems">
+	        		<a class="sideLinks" href="playlist.php"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>
 	        	</div>				
 			</div>
 

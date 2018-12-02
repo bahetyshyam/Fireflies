@@ -582,8 +582,18 @@ hr {
 	color: silver;
 }
 
-.queriesBack {
+.genreBack {
 	height: 6000px;
+	padding-top: 2%;
+}
+
+.playlistBack {
+	height: 6000px;
+	padding-top: 2%;
+}
+
+.queriesBack {
+	height: 3250px;
 	padding-top: 2%;
 }
 
