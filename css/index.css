@@ -340,7 +340,7 @@
 }
 
 .volumeBar .progressRem {
-	width: 0;
+	width: 100%;
 }
 
 #backgenre {
@@ -442,7 +442,7 @@ align-items: center;
 .gridViewItem {
 
 	margin-left: 7%;
-	margin-right: 6%;
+	margin-right: 9%;
 	margin-bottom: 3%;
 	display: inline-block;
 	margin-top: 5%;
@@ -580,4 +580,158 @@ hr {
 	font-size: 18px;
 	margin-right: 4%;
 	color: silver;
+}
+
+.queriesBack {
+	height: 6000px;
+	padding-top: 2%;
+}
+
+#queriesHead h2 {
+	font-size: 60px;
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	margin-bottom: 8%;
+}
+
+.queries {
+	padding: 0px 30px 10px 30px;
+}
+
+.queries .queryQuestion {
+	padding-left: 5%;
+}
+
+.queries .queryQuestion1 {
+	padding-left: 5%;
+	padding-top: -7%;
+}
+
+
+.queryTableHead h6 {
+	float: left;
+	width: 18%;
+	margin-left: 5%;
+	margin-bottom: 2%;
+	color: white;
+	font-size: 23px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.queryAnswer {
+	margin-bottom: 30%;
+}
+
+.queryAnswer1 {
+	margin-bottom: 10%;
+}
+
+.gridQuery {
+	width: 18%;
+	float: left;
+	margin-left: 5%;
+	color: #C9CCC9;
+	font-family: 'Raleway', sans-serif;
+	font-size: 17px;
+}
+
+
+.queries .queryQuestion h6 {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	margin-bottom: 3%;
+}
+
+.queries .queryQuestion1 h6 {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	margin-bottom: 3%;
+	margin-top: -15%;
+}
+
+.queryTableHead1 h6 {
+	width: 45%;
+	margin-left: 5%;
+	margin-bottom: 2%;
+	color: white;
+	font-size: 23px;
+	font-family: 'Raleway', sans-serif;
+	float: left;
+}
+
+.gridQuery1 {
+	width: 45%;
+	margin-left: 5%;
+	float: left;
+	color: #C9CCC9;
+	font-family: 'Raleway', sans-serif;
+	font-size: 17px;
+}
+
+.gridQuery2 {
+	width: 90%;
+	margin-left: 5%;
+	float: left;
+	color: #C9CCC9;
+	font-family: 'Raleway', sans-serif;
+	font-size: 17px;
+}
+
+.queryTableHead2 h6 {
+	width: 90%;
+	margin-left: 5%;
+	margin-bottom: 2%;
+	color: white;
+	font-size: 23px;
+	font-family: 'Raleway', sans-serif;
+	float: left;
+}
+
+.queryTableHead3 h6 {
+	width: 25%;
+	margin-left: 5%;
+	margin-bottom: 2%;
+	color: white;
+	font-size: 23px;
+	font-family: 'Raleway', sans-serif;
+	float: left;
+}
+
+.gridQuery3 {
+	width: 25%;
+	margin-left: 5%;
+	float: left;
+	color: #C9CCC9;
+	font-family: 'Raleway', sans-serif;
+	font-size: 17px;
+}
+
+.queryTableHead4 h6 {
+	width: 14%;
+	margin-left: 5%;
+	margin-bottom: 2%;
+	color: white;
+	font-size: 23px;
+	font-family: 'Raleway', sans-serif;
+	float: left;
+}
+
+.gridQuery4 {
+	width: 14%;
+	margin-left: 5%;
+	float: left;
+	color: #C9CCC9;
+	font-family: 'Raleway', sans-serif;
+	font-size: 17px;
+}
+
+.queries .queryQuestion2 h6 {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	margin-bottom: 3%;
+/*	margin-top: -12%;*/
+	margin-left: 5%;
 }
