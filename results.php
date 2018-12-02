@@ -51,9 +51,10 @@
 	<div class="resultBack grey darken-4">
 		<h2 id="searchSong" align="center">Tracks</h2>
 		<?php
-			$query1=mysqli_query($con,"select A.Song,B.Album_name,A.Play_time 
-										from Tracks A,Albums B
+			$query1=mysqli_query($con,"select A.Song,B.Album_name,C.Artist_name,A.Play_time 
+										from Tracks A,Albums B, Artist C
 										where A.Album_id=B.Album_id and
+                                        B.Artist_id=C.Artist_id and
 										A.Song like '%".$searchField."%'");
 
 			if(mysqli_num_rows($query1)==0) {
@@ -67,13 +68,16 @@
 			else {
 				echo "
 						<div class='queryTable'>
-							<div class='queryTableHead3'>
+							<div class='queryTableHead'>
 								<h6>Song</h6>
 							</div>
-							<div class='queryTableHead3'>
+							<div class='queryTableHead'>
 								<h6>Album</h6>
 							</div>
-							<div class='queryTableHead3'>
+							<div class='queryTableHead'>
+								<h6>Artist</h6>
+							</div>
+							<div class='queryTableHead'>
 								<h6>Play Time</h6>
 							</div>
 						</div>
@@ -82,14 +86,17 @@
 				while ($row=mysqli_fetch_array($query1)) {
 						echo "
 								<div class='queryTable'>
-									<div class='gridQuery3'>
+									<div class='gridQuery'>
 									". $row[0] ."
 									</div>
-									<div class='gridQuery3'>
+									<div class='gridQuery'>
 										". $row[1] ."
 									</div>
-									<div class='gridQuery3'>
+									<div class='gridQuery'>
 										". $row[2] ."
+									</div>
+									<div class='gridQuery'>
+										". $row[3] ."
 									</div>
 								</div>
 								
@@ -150,9 +157,10 @@
 		<h2 id="searchArtist" align="center">Artists</h2>
 
 		<?php
-			$query3=mysqli_query($con,"select B.Artist_name 
-										from Albums A,Artist B
+			$query3=mysqli_query($con,"select B.Artist_name, C.Song, A.Album_name
+										from Albums A,Artist B, Tracks C
 										where A.Artist_id=B.Artist_id and
+										C.Album_id=A.Album_id and 
 										B.Artist_name like '%".$searchField."%'");
 
 			if(mysqli_num_rows($query3)==0) {
@@ -166,8 +174,14 @@
 			else {
 				echo "
 						<div class='queryTable'>
-							<div class='queryTableHead2'>
+							<div class='queryTableHead3'>
 								<h6>Artist</h6>
+							</div>
+							<div class='queryTableHead3'>
+								<h6>Songs</h6>
+							</div>
+							<div class='queryTableHead3'>
+								<h6>Album</h6>
 							</div>
 						</div>
 					";
@@ -175,8 +189,14 @@
 				while ($row=mysqli_fetch_array($query3)) {
 							echo "
 									<div class='queryTable'>
-										<div class='gridQuery2'>
+										<div class='gridQuery3'>
 										". $row[0] ."
+										</div>
+										<div class='gridQuery3'>
+										". $row[1] ."
+										</div>
+										<div class='gridQuery3'>
+										". $row[2] ."
 										</div>
 
 									</div>
