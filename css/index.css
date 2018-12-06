@@ -583,7 +583,7 @@ hr {
 }
 
 .genreBack {
-	height: 6000px;
+	height: 7000px;
 	padding-top: 2%;
 }
 
@@ -593,12 +593,7 @@ hr {
 }
 
 .queriesBack {
-	height: 3250px;
-	padding-top: 2%;
-}
-
-.genreBack {
-	height: 6000px;
+	height: 3600px;
 	padding-top: 2%;
 }
 
@@ -813,4 +808,53 @@ hr {
 	font-family: 'Raleway', sans-serif;
 	color: white;
 	font-size: 20px;
+}
+
+.queries .queryQuestion2 h6 {
+	margin-top: 50%;
+}
+
+.queries .queryQuestion3 h6 {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	margin-top: 55%;
+	margin-bottom: 3%;
+	margin-left: 5%;
+}
+
+.queries .queryQuestion4 h6 {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	margin-top: 70%;
+	margin-bottom: 3%;
+	margin-left: 5%;
+}
+
+.queries .queryQuestion5 h6 {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	margin-top: 93%;
+	margin-bottom: 3%;
+	margin-left: 5%;
+}
+
+.queries .queryQuestion6 h6 {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	margin-top: 70%;
+	margin-bottom: 3%;
+	margin-left: 5%;
+}
+
+.queries .queryQuestion7 h6 {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	margin-top: 35%;
+	margin-bottom: 3%;
+	margin-left: 5%;
 }
