@@ -41,9 +41,6 @@
 	        	<div class="sideItems">
 	        		<a class="sideLinks" href="webpages/albums.php"><i class="medium sideIcons material-icons">queue_music</i>Albums</a>
 	        	</div>
-	        	<!-- <div class="sideItems">
-	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>
-	        	</div> -->
 	        	<div class="sideItems">
 	        		<a class="sideLinks" href="queries.php"><i class="medium sideIcons material-icons">question_answer</i>Queries</a>
 	        	</div>				
@@ -71,7 +68,7 @@
 						from Artist A, Albums B, Tracks C
 						where C.Album_id=B.Album_id and 
 						B.Artist_id=A.Artist_id AND
-						C.Playlist_id=1");
+						C.Playlist_id=1 order by C.Song");
 					echo "
 						<div class='queryTable'>
 							<div class='queryTableHead3'>
@@ -106,7 +103,7 @@
 				?>
 			</div>
 
-			<div class="queryQuestion">
+			<div class="queryQuestion4">
 				<h6>Playlist 2</h6>
 			</div>
 			<div class="queryAnswer">
@@ -115,7 +112,7 @@
 						from Artist A, Albums B, Tracks C
 						where C.Album_id=B.Album_id and 
 						B.Artist_id=A.Artist_id AND
-						C.Playlist_id=2");
+						C.Playlist_id=2 order by C.Song");
 					echo "
 						<div class='queryTable'>
 							<div class='queryTableHead3'>
@@ -150,7 +147,7 @@
 				?>
 			</div>
 
-			<div class="queryQuestion">
+			<div class="queryQuestion5">
 				<h6>Playlist 3</h6>
 			</div>
 			<div class="queryAnswer">
@@ -159,7 +156,7 @@
 						from Artist A, Albums B, Tracks C
 						where C.Album_id=B.Album_id and 
 						B.Artist_id=A.Artist_id AND
-						C.Playlist_id=3");
+						C.Playlist_id=3 order by C.Song");
 					echo "
 						<div class='queryTable'>
 							<div class='queryTableHead3'>
@@ -194,7 +191,7 @@
 				?>
 			</div>
 
-			<div class="queryQuestion">
+			<div class="queryQuestion6">
 				<h6>Playlist 4</h6>
 			</div>
 			<div class="queryAnswer">
@@ -203,7 +200,7 @@
 						from Artist A, Albums B, Tracks C
 						where C.Album_id=B.Album_id and 
 						B.Artist_id=A.Artist_id AND
-						C.Playlist_id=4");
+						C.Playlist_id=4 order by C.Song");
 					echo "
 						<div class='queryTable'>
 							<div class='queryTableHead3'>

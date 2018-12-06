@@ -20,19 +20,24 @@
 	      <div class="nav-wrapper">
 	        <a href="#" id="brand-link" class="brand-logo hvr-grow">Fireflies</a>
 	        <ul class="right hide-on-med-and-down">
-	          <li><a class="links hvr-grow" href="register.php">Sign In</a></li>
-	          <li><a class="links hvr-grow" href="register.php">Sign Up</a></li>
+	          <li><a class="links hvr-grow" href="register.php">Log In</a></li>
 	        </ul>
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">
-	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">search</i>Search</a>
+	        		<a class="sideLinks" href="Search.php"><i class="medium sideIcons material-icons">search</i>Search</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">music_note</i>Albums</a>
+	        		<a class="sideLinks" href="webpages/albums.php"><i class="medium sideIcons material-icons">music_note</i>Albums</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>
+	        		<a class="sideLinks" href="playlist.php"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>
+	        	</div>
+	        	<div class="sideItems">
+	        		<a class="sideLinks" href="genre.php"><i class="medium sideIcons material-icons">library_music</i>Genre</a>
+	        	</div>
+	        	<div class="sideItems">
+	        		<a class="sideLinks" href="queries.php"><i class="medium sideIcons material-icons">library_music</i>Queries</a>
 	        	</div>				
 			</div>
 

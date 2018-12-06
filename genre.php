@@ -58,7 +58,7 @@
 	<!--Navbar ends here -->
 	<div class="genreBack grey darken-4">
 		<div id="queriesHead">
-			<h2 align="center">Genre</h2>
+			<h2 align="center">Genres</h2>
 		</div>
 
 		<div class="queries">
@@ -72,7 +72,7 @@
 						where B.Album_id=C.Album_id AND
                         B.Artist_id=A.Artist_id AND
                         B.Genre_id=D.Genre_id AND
-                        D.Genre_id=1");
+                        D.Genre_id=1 order by C.Song");
 					echo "
 						<div class='queryTable'>
 							<div class='queryTableHead3'>
@@ -107,7 +107,7 @@
 				?>
 			</div>
 
-			<div class="queryQuestion">
+			<div class="queryQuestion2">
 				<h6>EDM</h6>
 			</div>
 			<div class="queryAnswer">
@@ -117,7 +117,7 @@
 						where B.Album_id=C.Album_id AND
                         B.Artist_id=A.Artist_id AND
                         B.Genre_id=D.Genre_id AND
-                        D.Genre_id=2");
+                        D.Genre_id=2 order by C.Song");
 					echo "
 						<div class='queryTable'>
 							<div class='queryTableHead3'>
@@ -152,7 +152,7 @@
 				?>
 			</div>
 
-			<div class="queryQuestion">
+			<div class="queryQuestion2">
 				<h6>Pop</h6>
 			</div>
 			<div class="queryAnswer">
@@ -162,7 +162,7 @@
 						where B.Album_id=C.Album_id AND
                         B.Artist_id=A.Artist_id AND
                         B.Genre_id=D.Genre_id AND
-                        D.Genre_id=3");
+                        D.Genre_id=3 order by C.Song");
 					echo "
 						<div class='queryTable'>
 							<div class='queryTableHead3'>
@@ -197,7 +197,7 @@
 				?>
 			</div>
 
-			<div class="queryQuestion">
+			<div class="queryQuestion2">
 				<h6>Hip Hop</h6>
 			</div>
 			<div class="queryAnswer">
@@ -207,7 +207,7 @@
 						where B.Album_id=C.Album_id AND
                         B.Artist_id=A.Artist_id AND
                         B.Genre_id=D.Genre_id AND
-                        D.Genre_id=4");
+                        D.Genre_id=4 order by C.Song");
 					echo "
 						<div class='queryTable'>
 							<div class='queryTableHead3'>
@@ -241,7 +241,7 @@
 				?>
 			</div>
 
-			<div class="queryQuestion">
+			<div class="queryQuestion3">
 				<h6>Country</h6>
 			</div>
 			<div class="queryAnswer">
@@ -251,7 +251,7 @@
 						where B.Album_id=C.Album_id AND
                         B.Artist_id=A.Artist_id AND
                         B.Genre_id=D.Genre_id AND
-                        D.Genre_id=5");
+                        D.Genre_id=5 order by C.Song");
 					echo "
 						<div class='queryTable'>
 							<div class='queryTableHead3'>
@@ -285,7 +285,7 @@
 				?>
 			</div>
 
-			<div class="queryQuestion">
+			<div class="queryQuestion2">
 				<h6>Rock</h6>
 			</div>
 			<div class="queryAnswer">
@@ -295,7 +295,7 @@
 						where B.Album_id=C.Album_id AND
                         B.Artist_id=A.Artist_id AND
                         B.Genre_id=D.Genre_id AND
-                        D.Genre_id=6");
+                        D.Genre_id=6 order by C.Song");
 					echo "
 						<div class='queryTable'>
 							<div class='queryTableHead3'>
@@ -329,7 +329,7 @@
 				?>
 			</div>
 
-			<div class="queryQuestion">
+			<div class="queryQuestion2">
 				<h6>Metal</h6>
 			</div>
 			<div class="queryAnswer">
@@ -339,7 +339,7 @@
 						where B.Album_id=C.Album_id AND
                         B.Artist_id=A.Artist_id AND
                         B.Genre_id=D.Genre_id AND
-                        D.Genre_id=7");
+                        D.Genre_id=7 order by C.Song");
 					echo "
 						<div class='queryTable'>
 							<div class='queryTableHead3'>

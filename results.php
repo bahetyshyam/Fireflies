@@ -30,7 +30,7 @@
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">
-	        		<a class="sideLinks" href="search.php"><i class="medium sideIcons material-icons">search</i>Search</a>
+	        		<a class="sideLinks" href="Search.php"><i class="medium sideIcons material-icons">search</i>Search</a>
 	        	</div>
 	        	<div class="sideItems">
 	        		<a class="sideLinks" href="genre.php"><i class="medium sideIcons material-icons">music_note</i>Genre</a>
@@ -163,10 +163,9 @@
 		<h2 id="searchArtist" align="center">Artists</h2>
 
 		<?php
-			$query3=mysqli_query($con,"select B.Artist_name, C.Song, A.Album_name
-										from Albums A,Artist B, Tracks C
+			$query3=mysqli_query($con,"select B.Artist_name,A.Album_name
+										from Albums A,Artist B
 										where A.Artist_id=B.Artist_id and
-										C.Album_id=A.Album_id and 
 										B.Artist_name like '%".$searchField."%'");
 
 			if(mysqli_num_rows($query3)==0) {
@@ -180,13 +179,10 @@
 			else {
 				echo "
 						<div class='queryTable'>
-							<div class='queryTableHead3'>
+							<div class='queryTableHead1'>
 								<h6>Artist</h6>
 							</div>
-							<div class='queryTableHead3'>
-								<h6>Songs</h6>
-							</div>
-							<div class='queryTableHead3'>
+							<div class='queryTableHead1'>
 								<h6>Album</h6>
 							</div>
 						</div>
@@ -195,16 +191,12 @@
 				while ($row=mysqli_fetch_array($query3)) {
 							echo "
 									<div class='queryTable'>
-										<div class='gridQuery3'>
+										<div class='gridQuery1'>
 										". $row[0] ."
 										</div>
-										<div class='gridQuery3'>
+										<div class='gridQuery1'>
 										". $row[1] ."
 										</div>
-										<div class='gridQuery3'>
-										". $row[2] ."
-										</div>
-
 									</div>
 									
 							";

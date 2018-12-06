@@ -310,7 +310,7 @@
 				?>
 			</div>
 
-			<div class="queryQuestion2">
+			<div class="queryQuestion7">
 				<h6>7. Determine the users whose name starts with A and have signed up after 1st January 2018.</h6>
 			</div>
 
