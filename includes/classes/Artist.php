@@ -4,6 +4,7 @@
 			private $artistId;
 			private $artistName;
 			private $artistPhoto;
+			private $artistDesc;
 
 			public function __construct($con, $artistId) {
 				$this->con = $con;
@@ -15,6 +16,7 @@
 				$this->artistName = $artist['Artist_name'];
 				$this->artistPhoto = $artist['Artist_photo'];
 				$this->artistId = $artist['Artist_id'];
+				$this->artistDesc = $artist['Artist_desc'];
 
 			}
 
@@ -28,6 +30,10 @@
 
 			public function getArtworkPath() {
 				return $this->artistPhoto;
+			}
+
+			public function getDesc() {
+				return $this->artistDesc;
 			}
 	}
 ?>
