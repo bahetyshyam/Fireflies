@@ -23,13 +23,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css" rel="stylesheet">
-	<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-<script type="text/javascript" src="../js/materialize.js"></script>
-<script type="text/javascript" src="../js/fontawesome-all.min.js"></script>
-<script type="text/javascript" src="../js/index.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../js/materialize.js"></script>
+	<script type="text/javascript" src="../js/fontawesome-all.min.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
 </head>
 <body>
 
@@ -89,9 +86,6 @@
 			$(document).mouseup(function() {
 				mouseDown = false;
 			});
-
-
-
 
 		});
 
@@ -172,7 +166,7 @@
 	<div class="navbar-fixed">
 	    <nav id="navbar" class="black">
 	      <div class="nav-wrapper">
-	        <a href="#" id="brand-link" class="brand-logo">Fireflies</a>
+	        <a href="../index.php" id="brand-link" class="brand-logo">Fireflies</a>
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">
@@ -242,9 +236,9 @@
 			<div id="nowPlayingCenter">
 				<div class="content playerControls">
 					<div class="buttons">
-						<button class="controlButton shuffle">
+						<!-- <button class="controlButton shuffle">
 							<i class="material-icons">shuffle</i>
-						</button>
+						</button> -->
 						<button class="controlButton previous" onclick="previousSong()">
 							<i class="material-icons">skip_previous</i>
 						</button>
@@ -257,12 +251,12 @@
 						<button class="controlButton next" onclick="nextSong()">
 							<i class="material-icons">skip_next</i>
 						</button>
-						<button class="controlButton repeat" onclick="setRepeat()">
+						<!-- <button class="controlButton repeat" onclick="setRepeat()">
 							<i class="material-icons">repeat</i>
 						</button>
 						<button class="controlButton repeatOne">
 							<i class="material-icons">repeat_one</i>
-						</button>
+						</button> -->
 					</div>
 
 					<div id="playbackBar">

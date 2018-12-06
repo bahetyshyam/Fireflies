@@ -182,15 +182,12 @@
 	<div class="navbar-fixed ">
 	    <nav id="navbar" class="black">
 	      <div class="nav-wrapper">
-	        <a href="albums.php" id="brand-link" class="brand-logo hvr-grow">Fireflies</a>
+	        <a href="../index.php" id="brand-link" class="brand-logo hvr-grow">Fireflies</a>
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">
 	        		<a class="sideLinks" href="../search.php"><i class="medium sideIcons material-icons">search</i>Search</a>
 	        	</div>
-	        	<!-- <div class="sideItems">
-	        		<span class="sideLinks" onclick="openpage('albums.php')"><i class="medium sideIcons material-icons">music_note</i>Albums</span>
-	        	</div> -->
 	        	<div class="sideItems">
 	        		<a class="sideLinks" href="../genre.php"><i class="medium sideIcons material-icons">music_note</i>Genre</a>
 	        	</div>
@@ -301,9 +298,9 @@
 			<div id="nowPlayingCenter">
 				<div class="content playerControls">
 					<div class="buttons">
-						<button class="controlButton shuffle">
+					<!-- 	<button class="controlButton shuffle">
 							<i class="material-icons">shuffle</i>
-						</button>
+						</button> -->
 						<button class="controlButton previous" onclick="previousSong()">
 							<i class="material-icons">skip_previous</i>
 						</button>
@@ -316,12 +313,12 @@
 						<button class="controlButton next" onclick="nextSong()">
 							<i class="material-icons">skip_next</i>
 						</button>
-						<button class="controlButton repeat" onclick="setRepeat()">
+					<!-- 	<button class="controlButton repeat" onclick="setRepeat()">
 							<i class="material-icons">repeat</i>
 						</button>
 						<button class="controlButton repeatOne">
 							<i class="material-icons">repeat_one</i>
-						</button>
+						</button> -->
 					</div>
 
 					<div id="playbackBar">

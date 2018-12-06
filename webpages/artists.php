@@ -1,6 +1,6 @@
 <?php
 	include("../config.php");
-	include("../assets/Classes/Artist.php");
+	include("../includes/classes/Artist.php");
 	include("../assets/Classes/Album.php");
 	include("../assets/Classes/Tracks.php");
 
@@ -25,31 +25,34 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css" rel="stylesheet">
-	<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-<script type="text/javascript" src="../js/materialize.js"></script>
-<script type="text/javascript" src="../js/fontawesome-all.min.js"></script>
-<script type="text/javascript" src="../js/index.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../js/materialize.js"></script>
+	<script type="text/javascript" src="../js/fontawesome-all.min.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
 </head>
 <body>
 	<!--Navbar begins here -->
 	<div class="navbar-fixed ">
 	    <nav id="navbar" class="black">
 	      <div class="nav-wrapper">
-	        <a href="#" id="brand-link" class="brand-logo hvr-grow">Fireflies</a>
+	        <a href="../index.php" id="brand-link" class="brand-logo hvr-grow">Fireflies</a>
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">
-	        		<a class="sideLinks" href="http://www.google.com"><i class="medium sideIcons material-icons">search</i>Search</a>
+	        		<a class="sideLinks" href="../Search.php"><i class="medium sideIcons material-icons">search</i>Search</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">music_note</i>Genre</a>
+	        		<a class="sideLinks" href="albums.php"><i class="medium sideIcons material-icons">music_note</i>Albums</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="#"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>
-	        	</div>				
+	        		<a class="sideLinks" href="../genre.php"><i class="medium sideIcons material-icons">music_note</i>Genre</a>
+	        	</div>
+	        	<div class="sideItems">
+	        		<a class="sideLinks" href="../playlist.php"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>
+	        	</div>
+	        	<div class="sideItems">
+	        		<a class="sideLinks" href="../queries.php"><i class="medium sideIcons material-icons">library_music</i>Queries</a>
+	        	</div>					
 			</div>
 
 			<a class="sideBtn"></a>
@@ -71,12 +74,12 @@
 			<div id="artistInfo">
 				<h5 id="aboutHead">About the Artist</h5>
 				<hr>
-				<p id="aboutContent">Coldplay are a British rock band, formed in 1996 by lead singer and pianist Chris Martin and lead guitarist Jonny Buckland at University College London (UCL). After they formed under the name Pectoralz, Guy Berryman joined the group as bassist and they changed their name to Starfish. Will Champion joined as drummer and backing vocalist, completing the line-up. Creative director and former manager Phil Harvey is often referred to as the fifth member by the band. The band renamed themselves Coldplay in 1998, before recording and releasing three EPs: Safety in 1998 and Brothers & Sisters and The Blue Room in 1999. The Blue Room was their first release on a major label, after signing to Parlophone.
-				Coldplay have won 107 awards from 252 nominations throughout their career, including nine Brit Awards, six MTV Video Music Awards, seven MTV Europe Music Awards and seven Grammy Awards from 34 nominations. They have sold more than 100 million records worldwide, making them one of the world's best-selling music artists.</p>
+				<p id="aboutContent"> <?php echo $artist->getDesc(); ?> </p>
 
 			</div>
 				
 		</div>
 	</div>
 </body>
+<script type="text/javascript" src="../js/index.js"></script>
 </html>
